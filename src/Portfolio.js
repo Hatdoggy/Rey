@@ -52,7 +52,7 @@ const WebPort = ()=>{
 					<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
 					<div className={mobile?"mt-5 flex flx-col mr-0":"ml-5 flex flx-col over-hide"}>
 						<h4 className={ndx===1?"mont bold mt-2 txt-r title":"mont bold mt-2 title"}>{cur.title}</h4>
-						<p className={ndx===1?"lato mt-2 txt-r":"lato mt-2"}>{cur.info}</p>
+						<p className={ndx===1?"lato-r mt-2 txt-r":"lato-r mt-2"}>{cur.info}</p>
 						<div className={mobile?"mt-5 flex al-flex jc-flex":"mt-2 flex"}>
 							{cur.tech.map((tech,index)=>
 								(
@@ -123,7 +123,7 @@ export const DesPort = (prop)=>{
 		<section id="desPort" className={mobile?"fade flx-col p-20 mid ":"fade ml-10 mr-10 h-100 flx-col p-20 mid port"}>
 			<div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-70"} id="des-main">
 				<h4 className="al-ce mont bold btn-grd p-10 clr-wht">Sample</h4>
-				<p className={mobile?"al-ce lato w-100 mt-5":"al-ce lato w-60 mt-2"}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est dolorem ut tenetur quasi rem, doloribus suscipit, inventore atque quaerat illum magnam repellat qui quidem commodi doloremque reiciendis harum, asperiores! Ullam.</p>
+				<p className={mobile?"al-ce lato-r w-100 mt-5":"al-ce lato-r w-60 mt-2"}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est dolorem ut tenetur quasi rem, doloribus suscipit, inventore atque quaerat illum magnam repellat qui quidem commodi doloremque reiciendis harum, asperiores! Ullam.</p>
 
 				{!mobile&&<div className="flex jc-flex mt-2 w-100">
 					<div className="flex w-100 jc-flex mt-2 flx-col filter" onClick={()=>filter("shirt")}>

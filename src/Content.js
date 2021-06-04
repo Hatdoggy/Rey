@@ -140,7 +140,7 @@ export const Mob_main = (prop)=>{
 			<Route exact path="/">
 				<div className="mr-10 ml-10 flex jc-ce al-ce h-per flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
       	 <h1 className="lato bold head pos-rel">Hi I am Rey</h1>
-      	 <p className="w-80 mt-5 txt-jst lato">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+      	 <p className="w-80 mt-5 txt-jst lato-r">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
      		 <Link className="mt-5 btn-grd w-75 lato bold al-ce p-10 clr-wht br-15 cursor" onClick={()=>prop.ret("Skills")} to='/skills'>View Skills</Link>
     		</div>
 			</Route>
@@ -154,7 +154,7 @@ export const Mob_main = (prop)=>{
 
 					<div className="flex jc-ce al-ce h-100 flx-col jc-flex al-flex w-100 trans-ht">
 							<h1 className="lato bold head pos-rel trans">Projects</h1>
-      	 			<p className="w-80 mt-5 txt-jst lato trans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+      	 			<p className="w-80 mt-5 txt-jst lato-r trans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
      		 			<ProjBtn proj={prop.proj} />
 					</div>
 
@@ -170,7 +170,7 @@ export const Mob_main = (prop)=>{
 
 				<div className="mr-10 ml-10 flex jc-ce al-ce h-per flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
       	 	<h1 className="lato bold head pos-rel">Contact Me</h1>
-      	 	<p className="w-80 mt-5 txt-jst lato">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+      	 	<p className="w-80 mt-5 txt-jst lato-r">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
      		</div>
      		<Contact/>
      	</Route>
