@@ -1,0 +1,32 @@
+
+/* Modals  */
+
+.modal-cont{
+    z-index: 56;
+    background-color: rgba(0,0,0,0.8);
+    animation: .5s fade;
+}.modal{
+    z-index: 60;
+}.modal img{
+    height: 100vh;
+    width: auto;
+}
+
+/* Loading Page */
+
+ .loading-screen{
+   background:linear-gradient(180deg, rgba(186,90,255,1) 25%, rgba(255,100,213,1) 52%, rgba(255,90,149,1) 80%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+ }
+
+ .change{
+  transition: .5s ease-in-out;
+ }
+
+ #first,#second,#third,#fourth,#fifth,#sixth,#seventh{
+  stroke-opacity: 0;
+  transition: .5s ease-in-out;
+ }

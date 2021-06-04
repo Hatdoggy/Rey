@@ -1,0 +1,247 @@
+@media only screen
+and (min-width: 320px)
+and (max-width: 767px){
+
+	.web-des{
+		flex-direction: column!important;
+	}.web-img{
+		width: 100%!important;
+		height: 100%!!important;
+		object-fit: cover;
+	}
+
+	section#webPort h2,section#webPort p{
+		text-align: center!important;
+		margin-top: 5%!important;
+		width: 100%;
+		font-family: 'Lato', sans-serif !important;
+	}.view{
+		width: 80%!important;
+	}.web-des div{
+		align-items: center!important;
+	}
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.tech{
+		font-size: 24px!important;
+	}.tech1{
+		font-size: 18px!important;
+	}
+
+	.circ-bot{
+		bottom: 8%!important;
+		right: 2%;
+		left: auto!important;
+	}.circ-top{
+		top: 12%!important;
+		left: 0!important;
+	}
+/*
+	h1{
+		font-size: 28px!important;
+	}*/
+	.bg-1,.bg-2{
+		width: 80%;
+		height: auto;
+	}.bg-1{
+		right: 60%;
+		bottom: 3%;
+	}.bg-2{
+		left: 60%;
+		top: 15%;
+  		-webkit-transform: scaleX(-1);
+  		transform: scaleX(-1);
+	}
+
+	.skill-5{
+		top:60%;
+		left: 50%;	
+	}.skill-6{
+		top:85%;
+		right: 0;
+	}.skill-7{
+		top:45%;
+		left: 75%
+	}
+
+	.arw-web,.arw-des{
+		position: inherit!important;
+	}
+	
+	.modal img{
+    height: calc(100vh/2)!important;
+	}
+
+	.mt-5{
+		margin-top: 5%!important;
+	}.mr-0{
+		margin-right: 0!important;
+	}.h-auto{
+		height: auto!important;
+	}.jc-flex{
+		justify-content: center!important;
+	}
+
+	.load-cont{
+		width: 150px!important;
+		height: 350px!important; 
+	}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 481px)
+and (max-device-width : 767px)  {
+/* Styles */
+	.tech{
+		font-size: 24px!important;
+	}.tech1{
+		font-size: 18px!important;
+	}
+
+	.load-cont{
+		width: 150px!important;
+		height: 350px!important; 
+	}
+
+	.btn-grd{
+		width: 50%!important;
+	}
+
+	.bg-1,.bg-2{
+		width: 30%;
+	}
+	.bg-1{
+		top: 25%;
+		left: 75%;
+		-webkit-transform: scaleX(-1);
+  		transform: scaleX(-1);
+	}.bg-2{
+		top: 25%;
+		right: 75%;
+	}
+
+	.circ-top{
+		top: 17%!important;
+	}
+
+	#prjBtn{
+		justify-content: center;
+	}
+
+	.port{
+		display: none!important;
+	}
+
+	.web-des img{
+		width: 350px!important;
+	}
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+
+	.tech{
+		font-size: 48px!important;
+	}.arw-web,.arw-des{
+		font-size: 64px!important;
+	}.tech1{
+		font-size: 20px!important;
+	}
+
+	div.w-75 {
+		margin-top: 5% !important;
+	}
+
+	.des-grid{
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))!important;
+	}
+
+	.skill{
+		width: 120px!important;
+		height: 120px!important;
+	}
+
+	.web-img {
+		width: 750px!important;
+		height: auto!important;
+	}div.web-des:nth-child(2) > img:nth-child(1) {
+ 		width: 700px!important;
+	}
+
+	.line {
+		left: 980px!important;
+	}.arw-web {
+		left: 23%!important;
+	}
+
+}
+@media screen and (min-width: 1400px) {
+	.web-img {
+		width: 750px!important;
+		height: auto!important;
+	}div.web-des:nth-child(2) > img:nth-child(1) {
+ 		width: 700px!important;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.web-img {
+		width: 750px!important;
+		height: auto!important;
+	}div.web-des:nth-child(2) > img:nth-child(1) {
+ 		width: 700px!important;
+	}
+}
+@media screen and (min-width: 1900px) {
+	.web-img {
+		width: 750px!important;
+		height: auto!important;
+	}div.web-des:nth-child(2) > img:nth-child(1) {
+ 		width: 700px!important;
+	}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
