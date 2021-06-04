@@ -21,10 +21,10 @@ const data = [
 		site:"https://hatdoggy.github.io/MrRecipe/",
 		class:"img-shdw ml-2 h-per cursor rec",
 		view:[	"./images/rec/rec-1.JPG",
-				"./images/rec/rec-2.JPG",
+				"./images/rec/rec-2.jpg",
 				"./images/rec/rec-3.JPG",
 				"./images/rec/rec-4.JPG",
-				"./images/rec/rec-5.JPG",
+				"./images/rec/rec-5.jpg",
 				"./images/rec/rec-6.JPG"],
 		id:"rec"
 	},	
