@@ -65,28 +65,28 @@ export const Skills = (props)=>{
 	return(
 		mobile?
 		<div className="h-100 pos-rel over-hide fade">
-			<img src="../images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
-			<img src="../images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
-			<img src="../images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
-			<img src="../images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>
-			<img src="../images/illustrator.svg" className="skill trans-1 pos-abs skill-5" alt="illustrator"/>
-			<img src="../images/photoshop.svg" className="skill trans-1 pos-abs skill-5" alt="photoshop"/>	
-			<img src="../images/figma.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
+			<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
+			<img src="./images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
+			<img src="./images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
+			<img src="./images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>
+			<img src="./images/illustrator.svg" className="skill trans-1 pos-abs skill-5" alt="illustrator"/>
+			<img src="./images/photoshop.svg" className="skill trans-1 pos-abs skill-5" alt="photoshop"/>	
+			<img src="./images/figma.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
 		</div>
 		:		
 		<div className="h-50 pos-rel over-hide fade">
 
 			{(props.skill.main)?<div>
-				<img src="../images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
-				<img src="../images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
-				<img src="../images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
-				<img src="../images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>	
+				<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
+				<img src="./images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
+				<img src="./images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
+				<img src="./images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>	
 			</div>
 			:	
 			<div>
-				<img src="../images/illustrator.svg" className="skill trans-1 pos-abs skill-1" alt="illustrator"/>
-				<img src="../images/photoshop.svg" className="skill trans-1 pos-abs skill-2" alt="photoshop"/>	
-				<img src="../images/figma.svg" className="skill trans-1 pos-abs skill-3" alt="figma"/>
+				<img src="./images/illustrator.svg" className="skill trans-1 pos-abs skill-1" alt="illustrator"/>
+				<img src="./images/photoshop.svg" className="skill trans-1 pos-abs skill-2" alt="photoshop"/>	
+				<img src="./images/figma.svg" className="skill trans-1 pos-abs skill-3" alt="figma"/>
 			</div>}
 
 		</div>			

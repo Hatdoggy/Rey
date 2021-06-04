@@ -11,176 +11,176 @@ const hide = {
 const des = [
 	{	
 		name:"alien",
-		link:"../images/illus/alien.jpg",
+		link:"./images/illus/alien.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"cat1",
-		link:"../images/illus/cat1.jpg",
+		link:"./images/illus/cat1.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"cat2",
-		link:"../images/illus/cat2.jpg",
+		link:"./images/illus/cat2.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"dino1",
-		link:"../images/illus/dino1.jpg",
+		link:"./images/illus/dino1.jpg",
 		type:"fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"dino2",
-		link:"../images/illus/dino2.jpg",
+		link:"./images/illus/dino2.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"dino3",
-		link:"../images/illus/dino3.jpg",
+		link:"./images/illus/dino3.jpg",
 		type:"fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"fish",
-		link:"../images/illus/fish.jpg",
+		link:"./images/illus/fish.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"iguana",
-		link:"../images/illus/iguana.jpg",
+		link:"./images/illus/iguana.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"octopus",
-		link:"../images/illus/octopus.jpg",
+		link:"./images/illus/octopus.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"orca1",
-		link:"../images/illus/orca1.jpg",
+		link:"./images/illus/orca1.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"orca2",
-		link:"../images/illus/orca2.jpg",
+		link:"./images/illus/orca2.jpg",
 		type:"fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"shirt7",
-		link:"../images/Shirt/shirt7.jpg",
+		link:"./images/Shirt/shirt7.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"purple",
-		link:"../images/illus/purple.jpg",
+		link:"./images/illus/purple.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"temple",
-		link:"../images/illus/temple.jpg",
+		link:"./images/illus/temple.jpg",
 		type:"fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"mug1",
-		link:"../images/mug/mug1.jpg",
+		link:"./images/mug/mug1.jpg",
 		type:"fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"mug2",
-		link:"../images/mug/mug2.jpg",
+		link:"./images/mug/mug2.jpg",
 		type:"fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"mug3",
-		link:"../images/mug/mug3.jpg",
+		link:"./images/mug/mug3.jpg",
 		type:"fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"shirt2",
-		link:"../images/Shirt/shirt2.jpg",
+		link:"./images/Shirt/shirt2.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"mug4",
-		link:"../images/mug/mug4.jpg",
+		link:"./images/mug/mug4.jpg",
 		type:"fit none mug",
 		id:"mug"
 	},
 		{	
 		name:"mag1",
-		link:"../images/print/mag1.jpg",
+		link:"./images/print/mag1.jpg",
 		type:"fit none",
 		id:"print"
 	},
 	{	
 		name:"mag2",
-		link:"../images/print/mag2.jpg",
+		link:"./images/print/mag2.jpg",
 		type:"fit none",
 		id:"print"
 	},
 	{	
 		name:"mag3",
-		link:"../images/print/mag3.jpg",
+		link:"./images/print/mag3.jpg",
 		type:"fit none",
 		id:"print"
 	},
 	{	
 		name:"poster",
-		link:"../images/print/poster.jpg",
+		link:"./images/print/poster.jpg",
 		type:"fit none",
 		id:"print"
 	},
 	{	
 		name:"shirt1",
-		link:"../images/Shirt/shirt1.jpg",
+		link:"./images/Shirt/shirt1.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"shirt3",
-		link:"../images/Shirt/shirt4.jpg",
+		link:"./images/Shirt/shirt4.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"shirt5",
-		link:"../images/Shirt/shirt5.jpg",
+		link:"./images/Shirt/shirt5.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 		{	
 		name:"shirt6",
-		link:"../images/Shirt/shirt6.jpg",
+		link:"./images/Shirt/shirt6.jpg",
 		type:"fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"poster1",
-		link:"../images/print/poster1.jpg",
+		link:"./images/print/poster1.jpg",
 		type:"fit none",
 		id:"print"
 	},
 
 	{	
 		name:"dog",
-		link:"../images/illus/dog.jpg",
+		link:"./images/illus/dog.jpg",
 		type:"fit long illus",
 		id:"illus"
 	},
