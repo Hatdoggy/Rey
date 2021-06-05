@@ -64,14 +64,22 @@ export const Skills = (props)=>{
 
 	return(
 		mobile?
-		<div className="h-100 pos-rel over-hide fade">
-			<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
-			<img src="./images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
-			<img src="./images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
-			<img src="./images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>
-			<img src="./images/illustrator.svg" className="skill trans-1 pos-abs skill-5" alt="illustrator"/>
-			<img src="./images/photoshop.svg" className="skill trans-1 pos-abs skill-5" alt="photoshop"/>	
-			<img src="./images/figma.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
+		<div className="h-per pos-rel flex flx-col over-hide fade">
+
+			<div className="pos-rel flex jc-flex al-flex h-per w-100">
+				<div className="flex flx-col jc-flex al-flex p-20 w-80 m-2 pos-abs fadeInDown front bg-blur">
+					<h4 className="mont bold al-ce clr-wht btn-grd p-10">Skills</h4>
+					<p className="lato al-ce mt-2 p-10">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Et, eius error facere molestias praesentium quisquam vero cupiditate ab debitis sunt rem temporibus, quod id quae provident consectetur nobis nostrum fugit!</p>
+				</div>
+
+					<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
+					<img src="./images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
+					<img src="./images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
+					<img src="./images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>
+					<img src="./images/illustrator.svg" className="skill trans-1 pos-abs skill-5" alt="illustrator"/>
+					<img src="./images/photoshop.svg" className="skill trans-1 pos-abs skill-5" alt="photoshop"/>	
+					<img src="./images/figma.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
+			</div>
 		</div>
 		:		
 		<div className="h-50 pos-rel over-hide fade">

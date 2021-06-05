@@ -163,7 +163,7 @@ const imgClick = (disp,ndx,type)=>{
   		mobile?
   		<div className="flex flx-col h-100 pos-rel flow-y-scr hide-x">
 
-  			<img className="bg-2 pos-abs back" src="./images/BG.png" alt="puzzle" loading="lazy"/>
+  			<img className="bg-2 pos-abs back bck-img" src="./images/BG.png" alt="puzzle" loading="lazy"/>
   			<Circ pos="top"/>
   			<Header res={res} main={main} ret={ret} menu={setMenu} cur={curPage}/>
 
@@ -173,7 +173,7 @@ const imgClick = (disp,ndx,type)=>{
 
   	 		{modal.disp&&<Modal ndx={modal.ndx} data={modal.obj.length !==0? modal.obj:des} set={imgClick}/>}
   	 		{menu&&<Nav res={res} main={main} ret={ret} menu={setMenu}/>}
-  	 		<img className="bg-1 pos-abs back" src="./images/BG.png" alt="puzzle" loading="lazy"/>
+  	 		<img className="bg-1 pos-abs back bck-img" src="./images/BG.png" alt="puzzle" loading="lazy"/>
   	 		<Footer res={res} main={main} ret={ret} menu={setMenu} des={proj.des} web={proj.web} set={imgClick}/>
   	 	</div>
   		:<div className="flex flx-col">

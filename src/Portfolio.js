@@ -15,6 +15,10 @@ const WebPort = ()=>{
     	query: '(max-width: 800px)'
   	})
 
+  	const land = useMediaQuery({
+    	query: '(min-width : 481px) and (max-device-width : 800px) and (orientation : landscape)'
+  	})
+
   	const disp = (event)=>{
   		let src = event.target.src;
   		let name = event.target.name;
@@ -49,7 +53,21 @@ const WebPort = ()=>{
 			 
 			{data.map((cur,ndx)=>(	
 				<div className={ndx===1?"web-des flex mt-5 flx-rev over-hide":"web-des flex mt-5 over-hide"} key={ndx}>
-					<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
+					{land?
+						<div className="w-100 flex flx-col">
+							<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
+							<div className="flex ml-2 h-cus mt-2 over-hide flow-x-scr thmb w-80">
+							{cur.view.map((src,ndx)=>(
+								<div className="fit ml-2" key={ndx}>
+									<img src={src} alt={ndx} className="img-shdw ml-5 w-small h-per cursor" name={cur.id} onClick={disp}/>
+								</div>
+							))}
+							</div>
+						</div>
+						:
+						<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
+					}
+					
 					<div className={mobile?"mt-5 flex flx-col mr-0":"ml-5 flex flx-col over-hide"}>
 						<h4 className={ndx===1?"mont bold mt-2 txt-r title":"mont bold mt-2 title"}>{cur.title}</h4>
 						<p className={ndx===1?"lato-r mt-2 txt-r":"lato-r mt-2"}>{cur.info}</p>
@@ -59,13 +77,15 @@ const WebPort = ()=>{
 								 	<FontAwesomeIcon icon={["fab", tech]} id={tech} key={index} className="tech"/>
 								))}
 						</div>
-						<div className="flex mt-5 h-cus over-hide flow-x-scr thmb w-100">
+						{!land&&
+							<div className="flex mt-5 h-cus over-hide flow-x-scr thmb w-100">
 							{cur.view.map((src,ndx)=>(
 								<div className="fit ml-2" key={ndx}>
 									<img src={src} alt={ndx} className="img-shdw ml-2 h-per cursor" name={cur.id} onClick={disp}/>
 								</div>
 							))}
-						</div>
+							</div>
+						}
 						<p onClick={()=>redirect(cur.site)} className="view cursor p-10 btn-grd al-ce mt-2 br-15 w-50 trans-1 lato bold">View Project</p>
 					</div>
 				</div>
@@ -80,6 +100,7 @@ export const DesPort = (prop)=>{
 
 	const mobile = useMediaQuery({
     	query: '(max-width: 800px)'
+    	
   	})
 
 	const filter = (event)=>{

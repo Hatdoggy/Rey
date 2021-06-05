@@ -168,9 +168,18 @@ export const Mob_main = (prop)=>{
 
 			<Route path="/cont">
 
-				<div className="mr-10 ml-10 flex jc-ce al-ce h-per flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
+				<div className="mr-10 ml-10 flex jc-ce al-ce h-100 flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
       	 	<h1 className="lato bold head pos-rel">Contact Me</h1>
       	 	<p className="w-80 mt-5 txt-jst lato-r">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+    			
+    			<div className="flex jc-flex w-100 mt-2">
+
+						<FontAwesomeIcon icon={["fab","github"]} className="tech ml-in" />
+						<FontAwesomeIcon icon={["fab","linkedin"]} className="tech ml-5"/>
+						<FontAwesomeIcon icon={["fab","google"]} className="tech ml-5"/>
+
+					</div>
+
      		</div>
      		<Contact/>
      	</Route>
