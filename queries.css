@@ -97,7 +97,7 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 481px)
-and (max-device-width : 767px)  {
+and (max-device-width : 800px)  {
 /* Styles */
 	.tech{
 		font-size: 24px!important;
@@ -119,12 +119,12 @@ and (max-device-width : 767px)  {
 	}
 	.bg-1{
 		top: 25%;
-		left: 75%;
+		left: 80%;
 		-webkit-transform: scaleX(-1);
   		transform: scaleX(-1);
 	}.bg-2{
 		top: 25%;
-		right: 75%;
+		right: 80%;
 	}
 
 	.circ-top{
@@ -141,15 +141,9 @@ and (max-device-width : 767px)  {
 
 	.web-des img{
 		width: 350px!important;
+	}.thmb img{
+		width: 150px!important;
 	}
-}
-
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
 }
 
 /* iPads (landscape) ----------- */
@@ -166,6 +160,14 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
+	.bg-2,.bg-1{
+		width: 50%!important;
+		top: 35%;
+	}.bg-2{
+		right: 65%!important;
+	}.bg-1{
+		left: 65%!important;	
+	}
 }
 
 /* Desktops and laptops ----------- */

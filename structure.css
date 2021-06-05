@@ -68,6 +68,10 @@ aside h4{
 	margin-top: auto;
 }
 
+.m-2{
+	margin: 2%;
+}
+
 .mb-2{
 	margin-bottom: 2%;
 }.mb-5{
@@ -84,6 +88,8 @@ aside h4{
 
 .w-20{
 	width: 20%;
+}.w-30{
+	width: 30%;
 }.w-50{
 	width: 50%;
 }.w-60{
@@ -102,6 +108,8 @@ aside h4{
 	width: auto;
 }.w-cus{
 	width: 120px;
+}.w-small{
+	width: 150px!important;
 }
 
 .m-w{
@@ -140,6 +148,10 @@ aside h4{
 	overflow-x: scroll;
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
+}
+
+.cont-icon{
+	font-size: 20px!important;
 }
 
 /* Text align */
