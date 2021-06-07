@@ -10,6 +10,10 @@
     animation: .5s fadeInLeft;
 }
 
+a:hover div{
+    animation: slide 1.5s;
+}
+
 .zoom:hover{
     animation: .5s zoom;
 }
@@ -76,6 +80,24 @@ aside h4.bold::after,p.nav::after{
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        -webkit-transform: translateX(-15px) rotate(30deg);
+    }
+    100% {
+        -webkit-transform: translateX(1000px) rotate(30deg) scale(1.5);
+    }
+}
+
+@keyframe slide{
+   0% {
+        transform: translateX(-15px) rotate(30deg);
+    }
+    100% {
+        transform: translateX(1000px) rotate(30deg) scale(1.5);
     }
 }
 

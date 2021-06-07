@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import './animations.css';
 @import './popUp.css';
 @import './structure.css';
@@ -12,9 +13,10 @@
   --white: #ffffff;
 }
 
- a, a:hover, a:focus, a:active {
+ a, a:focus, a:active {
       text-decoration: none;
       color: inherit;
+      transition: .5s ease-in-out;
  }
 
 html{
@@ -75,6 +77,26 @@ table {
 	color: white;
 }
 
+.btn-fb{
+	background-color: #3b5998;
+}.btn-gh{
+	background-color: #2b2b2b;
+}.btn-g{
+	background-color: #ff4242;
+}.btn-lnk{
+	background-color: #0072b1;
+}
+
+.slide{
+	transform: rotate(30deg);
+	height: calc(100% + 20px);
+	background-color: white;
+	width: 25px;
+	top: -15%;
+	left: -15%;
+	opacity: .3;
+}
+
 
 .logo{
 	height: 50px;
@@ -104,6 +126,8 @@ table {
 	font-weight: 100;
 }.lato-r{
 	font-weight: 300;	
+}.robo{
+	font-family: 'Roboto',sans-serif;
 }
 
 .mont{
@@ -211,7 +235,7 @@ h1{
 }h4{
   font-size: clamp(1.25rem, 1.5vw, 2.5rem);
 }p,label{
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 /*Side navbar*/
@@ -222,10 +246,7 @@ h1{
 	position: absolute;
 	opacity: 0;
 	transition: .5s ease-in-out;
-}.arw-web{
-	bottom: 5%;
-	left: 32%;
-}.arw-des{
+}.arw-des,.arw-web{
 	bottom: 5%;
 	left: 20%;
 }
@@ -253,6 +274,7 @@ h1{
 
 .greet{
 	font-size: 64px;
+	transition: 1s ease-in-out;
 }
 
 
@@ -388,4 +410,6 @@ input:focus,textarea:focus {
 	top:30%;
 	left: 15%;
 }
+
+
 

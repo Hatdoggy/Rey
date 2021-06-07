@@ -144,6 +144,10 @@ and (max-device-width : 800px)  {
 	}.thmb img{
 		width: 150px!important;
 	}
+
+	#margin-top p.lato-r{
+		width: 80%!important
+	}
 }
 
 /* iPads (landscape) ----------- */
@@ -211,8 +215,6 @@ and (min-width : 1824px) {
 
 	.line {
 		left: 980px!important;
-	}.arw-web {
-		left: 23%!important;
 	}
 
 }

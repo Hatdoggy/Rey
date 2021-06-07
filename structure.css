@@ -24,6 +24,8 @@ aside h4{
 	justify-content: flex-end;
 }.jc-flx-eve{
 	justify-content: space-evenly;
+}.jc-flx-ar{
+	justify-content: space-around;
 }.al-flex{
 	align-items: center;
 }.al-flx-e{
@@ -52,6 +54,8 @@ aside h4{
 	margin-right: 5%;
 }.mr-10{
 	margin-right: 10%;
+}.mr-auto{
+	margin-right: auto;
 }
 
 .mt-2{
@@ -80,6 +84,8 @@ aside h4{
 
 .p-10{
 	padding: 10px;
+}.p-15{
+	padding: 15px;
 }.p-20{
 	padding: 20px;
 }
@@ -182,6 +188,8 @@ aside h4{
 	z-index: 1;
 }.z-bg{
 	z-index: 0;
+}.behind{
+	z-index: -1;
 }
 
 .pos-rel{
