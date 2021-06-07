@@ -4,8 +4,8 @@ import { useMediaQuery } from 'react-responsive';
 const SkillDesc = ()=>{
 	return(
 			<div className="flex flx-col h-30 jc-flx-e p-20 fade">
-				<h4 className="mont bold">About Me</h4>
-				<p className="lato mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores, beatae consequuntur magnam quasi itaque at iste deserunt quaerat expedita quisquam dolore harum adipisci. Dolorem?</p>
+				<h4 className="mont bold">About Me</h4> 
+				<p className="lato mt-2">I am a Web Developer and a Graphic Designer with experiences in using HTML, CSS, Bootstrap, Javascript, and React for development. And experiences in using Figma, Photoshop, and Illustrator for Graphic design.</p>
 			</div>
 		);
 }
@@ -35,7 +35,9 @@ export const Skills = (props)=>{
 				image[2].style.top = gen() + 'px';
     			image[2].style.right = gen() + 'px';
     			image[3].style.top = gen() + 'px';
-    			image[3].style.left = gen() + 'px';					
+    			image[3].style.left = gen() + 'px';	
+       			image[4].style.top = gen() + 'px';
+    			image[4].style.left = gen() + 'px';					
 			}else if(mobile){
 				image[0].style.top = gen() + 'px';
     			image[0].style.right = gen() + 'px';
@@ -51,6 +53,8 @@ export const Skills = (props)=>{
     			image[5].style.left = (gen()+75) + 'px';
 				image[6].style.top = (gen()+75) + 'px';
     			image[6].style.right = (gen()+75) + 'px';
+    			image[7].style.top = (gen()+75) + 'px';
+    			image[7].style.right = (gen()+75) + 'px';
 			}else{
 				image[0].style.top = gen() + 'px';
     			image[0].style.right = gen() + 'px';
@@ -69,7 +73,7 @@ export const Skills = (props)=>{
 			<div className="pos-rel flex jc-flex al-flex h-per w-100">
 				<div className="flex flx-col jc-flex al-flex p-20 w-80 m-2 pos-abs fadeInDown front bg-blur">
 					<h4 className="mont bold al-ce clr-wht btn-grd p-10">Skills</h4>
-					<p className="lato al-ce mt-2 p-10">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Et, eius error facere molestias praesentium quisquam vero cupiditate ab debitis sunt rem temporibus, quod id quae provident consectetur nobis nostrum fugit!</p>
+					<p className="lato-r al-ce mt-2 p-10">The following are the skills used in creating projects in Graphic design and Web development</p>
 				</div>
 
 					<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>
@@ -79,6 +83,7 @@ export const Skills = (props)=>{
 					<img src="./images/illustrator.svg" className="skill trans-1 pos-abs skill-5" alt="illustrator"/>
 					<img src="./images/photoshop.svg" className="skill trans-1 pos-abs skill-5" alt="photoshop"/>	
 					<img src="./images/figma.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
+					<img src="./images/bootstrap.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
 			</div>
 		</div>
 		:		
@@ -89,6 +94,7 @@ export const Skills = (props)=>{
 				<img src="./images/html-5.svg" className="skill trans-1 pos-abs skill-2" alt="html"/>	
 				<img src="./images/react.svg" className="skill trans-1 pos-abs skill-3" alt="react"/>
 				<img src="./images/javascript.svg" className="skill trans-1 pos-abs skill-4" alt="js"/>	
+				<img src="./images/bootstrap.svg" className="skill trans-1 pos-abs skill-5" alt="figma"/>
 			</div>
 			:	
 			<div>

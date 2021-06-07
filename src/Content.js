@@ -82,7 +82,7 @@ const Main = (prop)=>{
 
 			<div className="greet flex flx-col w-50 jc-flex ai-ce">
 				<h1 className="mont bold w-75">Hi I am Rey</h1>
-				<div className="w-75 mt-2">
+				<div className="w-75 mt-2 fade_5" id="greet-icon">
 					<FontAwesomeIcon icon={["fab","github"]} className="tech" />
 					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech"/>
 					<FontAwesomeIcon icon={["fab","google"]} className="tech"/>
@@ -95,8 +95,8 @@ const Main = (prop)=>{
 					<Route exact path="/">
 						<SkillDesc/>
 							<div className="btn flex fade_5 trans mt-2 mb-2 p-10 br-15 btn-grd">
-								<h4 onClick={()=>clicked("main")} className="white lato w-50 al-ce cursor" id="main"> Main Dev Skills</h4>
-								<h4 onClick={()=>clicked("other")} className="dark lato w-50 al-ce cursor" id="other"> Other Dev Skills</h4>
+								<h4 onClick={()=>clicked("main")} className="white lato w-50 al-ce cursor" id="main"> Dev Skills</h4>
+								<h4 onClick={()=>clicked("other")} className="dark lato w-50 al-ce cursor" id="other"> Design Skills</h4>
 							</div>
 						<Skills skill={prop.type}/>
 					</Route>
@@ -140,7 +140,7 @@ export const Mob_main = (prop)=>{
 			<Route exact path="/">
 				<div className="mr-10 ml-10 flex jc-ce al-ce h-per flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
       	 <h1 className="lato bold head pos-rel">Hi I am Rey</h1>
-      	 <p className="w-80 mt-5 txt-jst lato-r">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+      	 <p className="w-100 mt-5 txt-jst lato-r">I am a Web Developer and a Graphic Designer with experiences in using HTML, CSS, Bootstrap, Javascript, and React for development. And experiences in using Figma, Photoshop, and Illustrator for Graphic design.</p>
      		 <Link className="mt-5 btn-grd w-75 lato bold al-ce p-10 clr-wht br-15 cursor" onClick={()=>prop.ret("Skills")} to='/skills'>View Skills</Link>
     		</div>
 			</Route>
@@ -154,7 +154,7 @@ export const Mob_main = (prop)=>{
 
 					<div className="flex jc-ce al-ce h-100 flx-col jc-flex al-flex w-100 trans-ht">
 							<h1 className="lato bold head pos-rel trans">Projects</h1>
-      	 			<p className="w-80 mt-5 txt-jst lato-r trans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
+      	 			<p className="w-100 mt-5 txt-jst lato-r trans">Explore my projects on Web development and Graphic design. These projects contain my knowledge and application of the different topics related to both Web development and Graphic design.</p>
      		 			<ProjBtn proj={prop.proj} />
 					</div>
 
@@ -170,16 +170,7 @@ export const Mob_main = (prop)=>{
 
 				<div className="mr-10 ml-10 flex jc-ce al-ce h-100 flx-col jc-flex al-flex pos-rel fade_5" id="main-top">
       	 	<h1 className="lato bold head pos-rel">Contact Me</h1>
-      	 	<p className="w-80 mt-5 txt-jst lato-r">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores</p>
-    			
-    			<div className="flex jc-flex w-100 mt-2">
-
-						<FontAwesomeIcon icon={["fab","github"]} className="tech ml-in" />
-						<FontAwesomeIcon icon={["fab","linkedin"]} className="tech ml-5"/>
-						<FontAwesomeIcon icon={["fab","google"]} className="tech ml-5"/>
-
-					</div>
-
+      	 	<p className="w-100 mt-5 txt-jst lato-r">Did you like my websites or designs? contact me by clicking any of the following buttons to connect and make wonderful things with me</p>
      		</div>
      		<Contact/>
      	</Route>

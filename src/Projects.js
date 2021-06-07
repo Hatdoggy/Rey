@@ -6,7 +6,7 @@ const Projects = (prop)=>{
 	return(
 		<div className="flex flx-col h-30 jc-flx-e p-20 fade_5">
 			<h4 className="mont bold">Projects</h4>
-			<p className="lato-r mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae et quis deleniti obcaecati maiores, beatae consequuntur magnam quasi itaque at iste deserunt quaerat expedita quisquam dolore harum adipisci. Dolorem?</p>
+			<p className="lato-r mt-2">Explore my projects on Web development and Graphic design. These projects contain my knowledge and application of the different topics related to both Web development and Graphic design.</p>
 		</div>
 		);
 }

@@ -17,7 +17,7 @@ const SideNav = (prop)=>{
 			<Router>
 			<h4 className="mont bold w-50"><Link onClick={()=>prop.res()} to="/">About</Link></h4>
 			<h4 className="mont bold w-50"><Link onClick={()=>prop.res()} to="/proj">Projects</Link></h4>
-			<h4 className="mont bold w-50"><Link onClick={()=>prop.res()} to="/cont">Contact</Link></h4>	
+			<h4 className="mont bold w-50"><Link onClick={()=>prop.res('Contact')} to="/cont">Contact</Link></h4>	
 			</Router>		
 		</aside>
 		)
@@ -140,7 +140,7 @@ export const Footer = (prop)=>{
 				<div className="flex jc-flx-eve w-100 fade_5">
 					<FontAwesomeIcon icon={["fab","facebook"]} className="tech1" onClick={()=>redirect("https://www.facebook.com/rey.ondap.77/")}/>
 					<FontAwesomeIcon icon={["fab","instagram"]} className="tech1" onClick={()=>redirect("https://www.instagram.com/onda_plor/")}/>
-					<FontAwesomeIcon icon={["fab","tiktok"]} className="tech1" onClick={()=>redirect("https://www.tiktok.com/@onda_plor?lang=en")}/>	
+					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech1" onClick={()=>redirect("www.linkedin.com/in/rey-louis-ondap-7282991ba")}/>	
 				</div>	
 			</Router>
 			}

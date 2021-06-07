@@ -50,8 +50,13 @@ const WebPort = ()=>{
 
 	return(
 		<section id="webPort" className={mobile?"fade flex flx-col p-20 mid ":"fade ml-10 mr-10 flx-col h-per p-20 mid port mb-2"}>
-			 
-			{data.map((cur,ndx)=>(	
+			 <div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-70"} id="des-main">
+				<h4 className="al-ce mont bold btn-grd p-10 clr-wht">Web Development Projects</h4>
+				<p className={mobile?"al-ce lato-r w-100 mt-5":"al-ce lato-r w-60 mt-2"}>The following are the projects I made the past few months studying the fundamentals of web development these show my knowledge on HTML, CSS, Javascript, and React JS</p>
+			</div>
+			
+			<div>
+				{data.map((cur,ndx)=>(	
 				<div className={ndx===1?"web-des flex mt-5 flx-rev over-hide":"web-des flex mt-5 over-hide"} key={ndx}>
 					{land?
 						<div className="w-100 flex flx-col">
@@ -90,6 +95,7 @@ const WebPort = ()=>{
 					</div>
 				</div>
 			))}
+			</div>
 		</section>		
 		);
 }
@@ -143,8 +149,8 @@ export const DesPort = (prop)=>{
 	return(
 		<section id="desPort" className={mobile?"fade flx-col p-20 mid ":"fade ml-10 mr-10 h-100 flx-col p-20 mid port"}>
 			<div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-70"} id="des-main">
-				<h4 className="al-ce mont bold btn-grd p-10 clr-wht">Sample</h4>
-				<p className={mobile?"al-ce lato-r w-100 mt-5":"al-ce lato-r w-60 mt-2"}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est dolorem ut tenetur quasi rem, doloribus suscipit, inventore atque quaerat illum magnam repellat qui quidem commodi doloremque reiciendis harum, asperiores! Ullam.</p>
+				<h4 className="al-ce mont bold btn-grd p-10 clr-wht">Graphic Design Projects</h4>
+				<p className={mobile?"al-ce lato-r w-100 mt-5":"al-ce lato-r w-60 mt-2"}>These are my projects from my past jobs in graphic design, the software used in creating these designs are mostly Adobe Photoshop and Adobe Illustrator</p>
 
 				{!mobile&&<div className="flex jc-flex mt-2 w-100">
 					<div className="flex w-100 jc-flex mt-2 flx-col filter" onClick={()=>filter("shirt")}>

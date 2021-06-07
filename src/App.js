@@ -50,6 +50,15 @@ const App = ()=>{
 			main:true,
 			other:false
 		})
+
+		let icons = document.querySelector("#greet-icon");
+		if(!mobile){
+			if(val === 'Contact'){
+				icons.classList.add('port');
+			}else{
+				icons.classList.remove('port');
+			}
+		}
 	};
 
 	const test = (val,arr,trgt,body)=>{
@@ -88,6 +97,10 @@ const App = ()=>{
 	})
 
 	useEffect(()=>{
+		let foot = document.querySelector('footer');
+		console.log(foot)
+		// (window.location.href === "http://localhost:3000/#/cont")?foot.classList.add('port'):foot.classList.remove('port')
+		
 		if(!fin){
 			let parent  = document.querySelector("#border").children;
 			let trgt = document.querySelectorAll(".change");
@@ -107,6 +120,7 @@ const App = ()=>{
 	})	
 
 	const ret = (val)=>{
+
 		window.scrollTo({
 			top:0,
 			behavior:'smooth'
@@ -117,11 +131,21 @@ const App = ()=>{
 		},1000);
 
 		if(mobile){
+
 			let foot = document.querySelector('footer div');
-				if(foot)val === "Contact"?foot.classList.add('port'):foot.classList.remove('port')
+
+				if(foot){
+					val === "Contact"?foot.classList.add('port'):foot.classList.remove('port')
+				}
 			setPage(val);
 			setMenu(false);
+
 		}
+		else{
+			let icons = document.querySelector("#greet-icon");
+			(val === "Contact")?icons.style.display = 'none!important':icons.style.display = 'inherit!important';
+		}
+
 	}
 
 /*Modal functions*/

@@ -15,7 +15,7 @@ const data = [
 	},	
 	{	
 		title:"Mr.Recipe",
-		info:"This web application was made because I love cooking and I used The MealDB to display different types of recipes. ",
+		info:"A web application made because of the love for cooking, used MealDB api to display different types of recipes. ",
 		tech:["html5","css3-alt","js"],
 		src:"./images/rec/rec-1.JPG",
 		site:"https://hatdoggy.github.io/MrRecipe/",
