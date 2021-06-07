@@ -73,7 +73,7 @@ export const Skills = (props)=>{
 			<div className="pos-rel flex jc-flex al-flex h-per w-100">
 				<div className="flex flx-col jc-flex al-flex p-20 w-80 m-2 pos-abs fadeInDown front bg-blur">
 					<h4 className="mont bold al-ce clr-wht btn-grd p-10">Skills</h4>
-					<p className="lato-r al-ce mt-2 p-10">The following are the skills used in creating projects in Graphic design and Web development</p>
+					<p className="lato-r al-ce mt-2 p-10">The following are what I use in creating projects in Graphic design and Web development</p>
 				</div>
 
 					<img src="./images/css.svg" className="skill trans-1 pos-abs skill-1" alt="css"/>

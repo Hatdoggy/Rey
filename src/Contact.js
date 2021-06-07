@@ -55,7 +55,7 @@ export const Contact = ()=>{
 					<FontAwesomeIcon className="mr-auto" icon={["fab","github"]}/>
 					Github
 				</a>
-				<a href="www.linkedin.com/in/rey-louis-ondap-7282991ba" className="btn-lnk p-15 mt-2 clr-wht lato bold br-20 pos-rel over-hide al-ce flex jc-flx-ar">
+				<a href="https://www.linkedin.com/in/rey-louis-ondap-7282991ba" className="btn-lnk p-15 mt-2 clr-wht lato bold br-20 pos-rel over-hide al-ce flex jc-flx-ar">
 					<div className="slide pos-abs"></div>
 					<FontAwesomeIcon className="mr-auto" icon={["fab","linkedin"]}/>
 					LinkedIn			

@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import { Link as Scroll} from 'react-scroll';
 import Logo from './Logo.js';
-import DelayLink from 'react-delay-link';
 import { useMediaQuery } from 'react-responsive';
 import './fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -55,6 +54,11 @@ export const Header = (prop)=>{
 }
 
 export const Nav = (prop)=>{
+
+	const transfer = (url)=>{
+		window.location.href = url;
+	}
+
 	return(
 		<nav className="w-100 flex jc-flex al-flex h-100 frnt-top bg-white pos-fix fade_5">
 			<FontAwesomeIcon icon="times-circle" className="exit pos-abs fade_5" onClick={()=>prop.menu(false)}/>
@@ -67,10 +71,9 @@ export const Nav = (prop)=>{
 
 				<div className="flex jc-flex w-100 mt-5 nav-tech">
 
-					<FontAwesomeIcon icon={["fab","github"]} className="tech ml-in" />
-					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech ml-5"/>
-					<FontAwesomeIcon icon={["fab","google"]} className="tech ml-5"/>
-
+					<FontAwesomeIcon icon={["fab","github"]} className="tech ml-in" onClick={()=>transfer('https://github.com/Hatdoggy')}/>
+					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech ml-5" onClick={()=>transfer('https://www.linkedin.com/in/rey-louis-ondap-7282991ba')}/>
+					<FontAwesomeIcon icon={["fab","google"]} className="tech ml-5"onClick={()=>transfer('https://mail.google.com/mail/u/0/?fs=1&to=ondaprey@gmail.com&tf=cm')}/>
 				</div>
 
 				</Router>				
@@ -140,7 +143,7 @@ export const Footer = (prop)=>{
 				<div className="flex jc-flx-eve w-100 fade_5">
 					<FontAwesomeIcon icon={["fab","facebook"]} className="tech1" onClick={()=>redirect("https://www.facebook.com/rey.ondap.77/")}/>
 					<FontAwesomeIcon icon={["fab","instagram"]} className="tech1" onClick={()=>redirect("https://www.instagram.com/onda_plor/")}/>
-					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech1" onClick={()=>redirect("www.linkedin.com/in/rey-louis-ondap-7282991ba")}/>	
+					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech1" onClick={()=>redirect("https://www.linkedin.com/in/rey-louis-ondap-7282991ba")}/>	
 				</div>	
 			</Router>
 			}

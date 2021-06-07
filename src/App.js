@@ -98,8 +98,6 @@ const App = ()=>{
 
 	useEffect(()=>{
 		let foot = document.querySelector('footer');
-		console.log(foot)
-		// (window.location.href === "http://localhost:3000/#/cont")?foot.classList.add('port'):foot.classList.remove('port')
 		
 		if(!fin){
 			let parent  = document.querySelector("#border").children;

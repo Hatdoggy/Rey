@@ -1,4 +1,4 @@
-import React,{useState,useEffect,lazy,Suspense} from 'react';
+import React,{useState,useEffect} from 'react';
 import SkillDesc,{Skills} from './Skills.js'
 import Projects,{ProjBtn} from './Projects.js'
 import {
@@ -31,12 +31,9 @@ const Main = (prop)=>{
 	const line = ()=>{
 		// let target = document.querySelector("#line span");
 		let show = document.querySelector("#webPort");
-
-
 		show.style.display = "flex";
-
-
 	}
+
 	const webShow = ()=>{
 		let show = document.querySelector("#desPort");
 		show.style.display = "flex";
@@ -48,6 +45,11 @@ const Main = (prop)=>{
 			let target = document.querySelector('.arw');
 			target.style.opacity = "1";
 		},10);
+	}
+
+	const transfer = (url)=>{
+		console.log(url)
+		window.location.href = url;
 	}
 
 	const clicked = (val)=>{	
@@ -83,9 +85,9 @@ const Main = (prop)=>{
 			<div className="greet flex flx-col w-50 jc-flex ai-ce">
 				<h1 className="mont bold w-75">Hi I am Rey</h1>
 				<div className="w-75 mt-2 fade_5" id="greet-icon">
-					<FontAwesomeIcon icon={["fab","github"]} className="tech" />
-					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech"/>
-					<FontAwesomeIcon icon={["fab","google"]} className="tech"/>
+					<FontAwesomeIcon icon={["fab","github"]} className="tech" onClick={()=>transfer('https://github.com/Hatdoggy')}/>
+					<FontAwesomeIcon icon={["fab","linkedin"]} className="tech" onClick={()=>transfer('https://www.linkedin.com/in/rey-louis-ondap-7282991ba')}/>
+					<FontAwesomeIcon icon={["fab","google"]} className="tech" onClick={()=>transfer('https://mail.google.com/mail/u/0/?fs=1&to=ondaprey@gmail.com&tf=cm')}/>
 				</div>
 			</div>
 			<section className="pos-rel jc-ce fadeInDown flex flx-col w-50 ">

@@ -1,12 +1,4 @@
-import Side,{Header} from './SideNav';
 import { useMediaQuery } from 'react-responsive';
-
-const hide = {
-	cloudName:"dxf6rxbyh",
-	APIKey:"244837241455518",
-	APISecret:"DRP8kQcnIjVyu6xA86Ha2duJsKk",
-	EnvVar:"cloudinary://244837241455518:DRP8kQcnIjVyu6xA86Ha2duJsKk@dxf6rxbyh"
-}
 
 const des = [
 	{	
@@ -235,10 +227,6 @@ export const Circ = (prop)=>{
 }
 
 export const Modal = (prop)=>{
-
-	const mobile = useMediaQuery({
-    	query: '(max-width: 800px)'
-  	})
 
 	return(
 		<div className="modal-cont w-100 flex jc-flex al-flex h-100 pos-fix" onClick={()=>prop.set(false)}>
