@@ -11,7 +11,8 @@ const data = [
 				"./images/dec/dec-2.JPG",
 				"./images/dec/dec-4.JPG",
 				"./images/dec/dec-5.JPG"],
-		id:"decNuc"
+		id:"decNuc",
+		code:"https://github.com/Hatdoggy/Deceased-Nucleus"
 	},	
 	{	
 		title:"Mr.Recipe",
@@ -26,7 +27,8 @@ const data = [
 				"./images/rec/rec-4.JPG",
 				"./images/rec/rec-5.jpg",
 				"./images/rec/rec-6.JPG"],
-		id:"rec"
+		id:"rec",
+		code:"https://github.com/Hatdoggy/MrRecipe"
 	},	
 	{	
 		title:"KP-aesthetics",
@@ -41,7 +43,8 @@ const data = [
 				"./images/kp/kp-4.JPG",
 				"./images/kp/kp-5.JPG",
 				"./images/kp/kp-6.JPG"],
-		id:"kp"
+		id:"kp",
+		code:"https://github.com/Hatdoggy/brochure-website"
 	}	
 ];
 

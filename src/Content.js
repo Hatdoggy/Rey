@@ -48,7 +48,6 @@ const Main = (prop)=>{
 	}
 
 	const transfer = (url)=>{
-		console.log(url)
 		window.location.href = url;
 	}
 

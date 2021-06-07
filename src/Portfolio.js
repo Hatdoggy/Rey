@@ -48,6 +48,10 @@ const WebPort = ()=>{
   		}
   	})
 
+  	const transfer = (url)=>{
+		window.location.href = url;
+	}
+
 	return(
 		<section id="webPort" className={mobile?"fade flex flx-col p-20 mid ":"fade ml-10 mr-10 flx-col h-per p-20 mid port mb-2"}>
 			 <div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-70"} id="des-main">
@@ -74,9 +78,9 @@ const WebPort = ()=>{
 					}
 					
 					<div className={mobile?"mt-5 flex flx-col mr-0":"ml-5 flex flx-col over-hide"}>
-						<h4 className={ndx===1?"mont bold mt-2 txt-r title":"mont bold mt-2 title"}>{cur.title}</h4>
+						<h4 className={ndx===1?"mont bold mt-2 txt-r title cursor":"mont bold mt-2 title cursor"} onClick={()=>transfer(cur.code)}>{cur.title}</h4>
 						<p className={ndx===1?"lato-r mt-2 txt-r":"lato-r mt-2"}>{cur.info}</p>
-						<div className={mobile?"mt-5 flex al-flex jc-flex":"mt-2 flex"}>
+						<div className={mobile?"mt-5 flex al-flex jc-flex":"mt-2 flex icon-cont"}>
 							{cur.tech.map((tech,index)=>
 								(
 								 	<FontAwesomeIcon icon={["fab", tech]} id={tech} key={index} className="tech"/>
