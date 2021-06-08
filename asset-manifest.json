@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/Rey/static/js/main.3e8984e7.chunk.js",
-    "main.js.map": "/Rey/static/js/main.3e8984e7.chunk.js.map",
-    "runtime-main.js": "/Rey/static/js/runtime-main.d1868e56.js",
-    "runtime-main.js.map": "/Rey/static/js/runtime-main.d1868e56.js.map",
-    "static/js/2.b8514238.chunk.js": "/Rey/static/js/2.b8514238.chunk.js",
-    "static/js/2.b8514238.chunk.js.map": "/Rey/static/js/2.b8514238.chunk.js.map",
-    "index.html": "/Rey/index.html",
-    "static/js/2.b8514238.chunk.js.LICENSE.txt": "/Rey/static/js/2.b8514238.chunk.js.LICENSE.txt"
+    "main.js": "http://hatdoggy.github.io/Rey/static/js/main.3e8984e7.chunk.js",
+    "main.js.map": "http://hatdoggy.github.io/Rey/static/js/main.3e8984e7.chunk.js.map",
+    "runtime-main.js": "http://hatdoggy.github.io/Rey/static/js/runtime-main.3a974baf.js",
+    "runtime-main.js.map": "http://hatdoggy.github.io/Rey/static/js/runtime-main.3a974baf.js.map",
+    "static/js/2.b8514238.chunk.js": "http://hatdoggy.github.io/Rey/static/js/2.b8514238.chunk.js",
+    "static/js/2.b8514238.chunk.js.map": "http://hatdoggy.github.io/Rey/static/js/2.b8514238.chunk.js.map",
+    "index.html": "http://hatdoggy.github.io/Rey/index.html",
+    "static/js/2.b8514238.chunk.js.LICENSE.txt": "http://hatdoggy.github.io/Rey/static/js/2.b8514238.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d1868e56.js",
+    "static/js/runtime-main.3a974baf.js",
     "static/js/2.b8514238.chunk.js",
     "static/js/main.3e8984e7.chunk.js"
   ]
