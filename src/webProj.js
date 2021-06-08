@@ -32,7 +32,7 @@ const data = [
 	},	
 	{	
 		title:"KP-aesthetics",
-		info:"A brochure website for an online business of my friend. It simply displays the products they sell and how to contact the seller.",
+		info:"A brochure website for an online that displays the products they sell and how to contact the seller.",
 		tech:["html5","css3-alt","js","react"],
 		src:"./images/kp/kp-1.JPG",
 		site:"https://hatdoggy.github.io/brochure-website/#/",
