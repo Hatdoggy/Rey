@@ -8,6 +8,8 @@
 	animation: .5s fade;
 }.fadeInLeft{
     animation: .5s fadeInLeft;
+}.fadeInRight{
+    animation: .5s fadeInRight;
 }
 
 a:hover div{
@@ -24,6 +26,10 @@ a:hover div{
 	transition: 1s ease-in-out;
 }.trans-ht{
     transition: max-height .5s ease-in-out;
+}.hov{
+    transition: .5s ease-in-out;
+}.hov:hover{
+    opacity: .8;
 }
 
 .open{
@@ -116,6 +122,17 @@ aside h4.bold::after,p.nav::after{
    0% {
         opacity: 0;
         transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframe fadeInRight{
+   0% {
+        opacity: 0;
+        transform: translateX(50%);
     }
     100% {
         opacity: 1;
