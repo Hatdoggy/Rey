@@ -4,10 +4,6 @@ and (max-width: 800px){
 
 	.web-des{
 		flex-direction: column!important;
-	}.web-img{
-		width: 100%!important;
-		height: 100%!!important;
-		object-fit: cover;
 	}
 
 	section#webPort h2,section#webPort p{
@@ -25,16 +21,18 @@ and (max-width: 800px){
 		font-size: clamp(.5rem,2em,2rem)!important;
 		top: 50%!important;
 	}
+
+	.tech{
+		font-size: 24px!important;
+	}
 }
 
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-	.tech{
-		font-size: 24px!important;
-	}.tech1{
+and (min-\width : 320px) 
+and (max-\width : 480px) {
+	.tech1{
 		font-size: 18px!important;
 	}
 
@@ -102,11 +100,9 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 481px)
-and (max-device-width : 800px)  {
+and (max-\width : 800px)  {
 /* Styles */
-	.tech{
-		font-size: 24px!important;
-	}.tech1{
+	.tech1{
 		font-size: 18px!important;
 	}
 
@@ -157,16 +153,25 @@ and (max-device-width : 800px)  {
 
 /* iPads (landscape) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (min-width : 768px) 
+and (max-width : 1024px) 
 and (orientation : landscape) {
 /* Styles */
+
+	.bg-2,.bg-1{
+		width: 50%!important;
+		top: 35%;
+	}.bg-2{
+		right: 65%!important;
+	}.bg-1{
+		left: 65%!important;	
+	}
 }
 
 /* iPads (portrait) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (min-width : 768px) 
+and (max-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
 	.bg-2,.bg-1{
@@ -222,35 +227,17 @@ and (min-width : 1824px) {
 		left: 980px!important;
 	}
 
-}
-@media screen and (min-width: 1400px) {
-	.web-img {
-		width: 750px!important;
-		height: auto!important;
-	}div.web-des:nth-child(2) > img:nth-child(1) {
- 		width: 700px!important;
+	.btn-cnt{
+		padding: 20px!important;
 	}
-}
-@media screen and (min-width: 1600px) {
-	.web-img {
-		width: 750px!important;
-		height: auto!important;
-	}div.web-des:nth-child(2) > img:nth-child(1) {
- 		width: 700px!important;
-	}
-}
-@media screen and (min-width: 1900px) {
-	.web-img {
-		width: 750px!important;
-		height: auto!important;
-	}div.web-des:nth-child(2) > img:nth-child(1) {
- 		width: 700px!important;
-	}
-}
 
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
+	.hor-line{
+		height: 5px!important;
+	}
+
+	p.btn-grd{
+		padding: 20px!important;
+		border-radius: 30px!important;
+	}
+
 }
