@@ -210,7 +210,7 @@ const imgClick = (disp,ndx,type)=>{
      	</div>
 
       {proj.web&&
-      	<div>
+      	<div className="h-per">
 					<Portfolio/>
       	</div>
       }

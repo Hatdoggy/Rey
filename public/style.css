@@ -73,8 +73,12 @@ table {
 	background-color: white;
 }.bg-blur{
 	background-color: rgba(255, 255, 255, .5);
+}.bg-dark{
+	background-color: rgba(255, 255, 255, 0.85);
 }.clr-wht{
 	color: white;
+}.clr-dark{
+	color: black;
 }
 
 .btn-fb{
@@ -138,10 +142,17 @@ table {
 	font-weight: bold;
 }
 
-.exit{
+.exit,.exit-1{
 	font-size: 24px;
-	right: 15px;
+}.exit{
 	top: 25px;
+	right: 15px;
+}.exit-1{
+	top: 0;
+	right: 10%;
+}.exit-1:hover{
+	cursor: pointer;
+	opacity: .8;
 }
 
 
@@ -157,7 +168,6 @@ table {
 
 .des-grid{
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  	/*grid-template-rows: repeat(6, 200px);*/
   	grid-gap: 1rem;
   	grid-auto-flow: dense;
   	margin-top: 10%;

@@ -1,6 +1,6 @@
 @media only screen
 and (min-width: 320px)
-and (max-width: 767px){
+and (max-width: 800px){
 
 	.web-des{
 		flex-direction: column!important;
@@ -19,6 +19,11 @@ and (max-width: 767px){
 		width: 80%!important;
 	}.web-des div{
 		align-items: center!important;
+	}
+
+	.arw-sz{
+		font-size: clamp(.5rem,2em,2rem)!important;
+		top: 50%!important;
 	}
 }
 

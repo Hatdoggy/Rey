@@ -1,21 +1,35 @@
 import React,{useEffect} from 'react';
-import data from './webProj.js'
+import data,{Web,WebMob} from './webProj.js'
 import './fontawesome'
 import des from './Cloud.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useMediaQuery } from 'react-responsive';
+import {useState} from 'react'
 
 const WebPort = ()=>{
+
+	let curNdx = 0;
+	const [webDesc,show] = useState({
+		display:false,
+		title:"",
+		info:"",
+		src:"",
+		site:"",
+		class:"",
+		id:"",
+		code:"",
+		ndx:0
+	});
 
 	const redirect = (url)=>{
 		window.location.href = url;
 	}
 
-	const mobile = useMediaQuery({
+	const mobile = useMediaQuery({//Phone
     	query: '(max-width: 800px)'
   	})
 
-  	const land = useMediaQuery({
+  	const land = useMediaQuery({//Ipad
     	query: '(min-width : 481px) and (max-device-width : 800px) and (orientation : landscape)'
   	})
 
@@ -23,11 +37,42 @@ const WebPort = ()=>{
   		let src = event.target.src;
   		let name = event.target.name;
   		let target = document.querySelector('#'+name);
-
+  		console.log(target);
   		target.classList.toggle('fade-1');
   		target.src = src;
   		setTimeout(()=>target.classList.toggle('fade-1'), 1000)
   	}	
+
+  	const showInfo = (info)=>{
+  		show({
+  			display:true,
+			title:[info.title],
+			info:[info.info],
+			src:[info.src],
+			site:[info.site],
+			class:[info.class],
+			view:[...info.view],
+			id:[info.id],
+			code:[info.code],
+			ndx:[info.ndx]
+  		})
+  	}
+
+  	const reset = ()=>{
+
+   		show({
+			display:false,
+			title:"",
+			info:"",
+			src:"",
+			site:"",
+			class:"",
+			id:"",
+			code:"",
+			ndx:0
+  		}) 		
+  		
+  	}
 
   	useEffect(()=>{
   		let scrll = document.querySelectorAll(".thmb");
@@ -48,58 +93,49 @@ const WebPort = ()=>{
   		}
   	})
 
+  	const arw = (dir)=>{
+  		let scrll = document.querySelector("#web-scrll");
+  		let where = document.querySelectorAll('.scr-itm');
+  		if(dir === "right"&&curNdx < 2){
+  			curNdx++;
+  		}else if(dir === "left" && curNdx >0){
+  			curNdx--;
+  		}
+  		scrll.scrollLeft = where[curNdx].offsetLeft;
+  	}
+
   	const transfer = (url)=>{
 		window.location.href = url;
 	}
 
 	return(
 		<section id="webPort" className={mobile?"fade flex flx-col p-20 mid ":"fade ml-10 mr-10 flx-col h-per p-20 mid port mb-2"}>
-			 <div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-70"} id="des-main">
+			 <div className={mobile?"flex flx-col al-ce w-100 h-auto":"flex flx-col al-ce w-100 h-auto"} id="des-main">
 				<h4 className="al-ce mont bold btn-grd p-10 clr-wht">Web Development Projects</h4>
 				<p className={mobile?"al-ce lato-r w-100 mt-5":"al-ce lato-r w-60 mt-2"}>The following are the projects I made the past few months studying the fundamentals of web development these show my knowledge on HTML, CSS, Javascript, and React JS</p>
 			</div>
 			
-			<div>
-				{data.map((cur,ndx)=>(	
-				<div className={ndx===1?"web-des flex mt-5 flx-rev over-hide":"web-des flex mt-5 over-hide"} key={ndx}>
-					{land?
-						<div className="w-100 flex flx-col">
-							<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
-							<div className="flex ml-2 h-cus mt-2 over-hide flow-x-scr thmb w-80">
-							{cur.view.map((src,ndx)=>(
-								<div className="fit ml-2" key={ndx}>
-									<img src={src} alt={ndx} className="img-shdw ml-5 w-small h-per cursor" name={cur.id} onClick={disp}/>
-								</div>
-							))}
-							</div>
-						</div>
-						:
-						<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
-					}
-					
-					<div className={mobile?"mt-5 flex flx-col mr-0":"ml-5 flex flx-col over-hide"}>
-						<h4 className={ndx===1?"mont bold mt-2 txt-r title cursor":"mont bold mt-2 title cursor"} onClick={()=>transfer(cur.code)}>{cur.title}</h4>
-						<p className={ndx===1?"lato-r mt-2 txt-r":"lato-r mt-2"}>{cur.info}</p>
-						<div className={mobile?"mt-5 flex al-flex jc-flex":"mt-2 flex icon-cont"}>
-							{cur.tech.map((tech,index)=>
-								(
-								 	<FontAwesomeIcon icon={["fab", tech]} id={tech} key={index} className="tech"/>
-								))}
-						</div>
-						{!land&&
-							<div className="flex mt-5 h-cus over-hide flow-x-scr thmb w-100">
-							{cur.view.map((src,ndx)=>(
-								<div className="fit ml-2" key={ndx}>
-									<img src={src} alt={ndx} className="img-shdw ml-2 h-per cursor" name={cur.id} onClick={disp}/>
-								</div>
-							))}
-							</div>
-						}
-						<p onClick={()=>redirect(cur.site)} className="view cursor p-10 btn-grd al-ce mt-2 br-15 w-50 trans-1 lato bold">View Project</p>
+		{mobile?
+			<WebMob land={land} redirect={redirect} disp={disp}/>
+			:
+			<div className="flex pos-rel mt-5">
+				<div className="flex scr-man flow-x-scr hide-bar" id="web-scrll">
+					{data.map((elem,ndx)=>(
+					<div className={`${elem.class} flex al-flex flx-col w-100 flx-shr scr-el scr-itm fadeInRight`} key={ndx}>
+						<img src={elem.src} alt={elem.alt} className="w-80 h-per img-shdw"/>
+						<p className="btn-grd clr-wht al-ce lato p-10 mt-2 w-50 cursor hov bold pos-rel" onClick={()=>showInfo(elem)}>
+						View {elem.title}
+						</p>
 					</div>
+					))}
 				</div>
-			))}
+				<FontAwesomeIcon className="pos-abs clr-dark arw-l arw-sz cursor hov" icon={["far","arrow-alt-circle-left"]} onClick={()=>arw("left")}/>
+				<FontAwesomeIcon className="pos-abs clr-dark arw-r arw-sz cursor hov" icon={["far","arrow-alt-circle-right"]} onClick={()=>arw("right")}/>
+
+				{webDesc.display&&<Web webDesc={webDesc} disp={disp} reset={reset} transfer={transfer} mobile={mobile}/>}			
 			</div>
+		}
+
 		</section>		
 		);
 }
