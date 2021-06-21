@@ -93,10 +93,8 @@ const App = ()=>{
 	}
 
 	useEffect(()=>{
-		document.addEventListener('scroll',scroll);
-	})
 
-	useEffect(()=>{
+		document.addEventListener('scroll',scroll);
 		let foot = document.querySelector('footer');
 		
 		if(!fin){

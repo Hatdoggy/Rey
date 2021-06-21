@@ -141,7 +141,9 @@ aside h4{
 }.h-auto{
 	height: auto;
 }.h-cus{
-	height: 75px;
+	max-height: 100px;
+	height: 75px !important;
+	min-height: 65px;
 }
 
 .cust{
@@ -186,6 +188,8 @@ aside h4{
 	right: 0;
 }.arw-l{
 	left: 0;
+}.icont{
+	font-size: clamp(18px,1.5vw,24px);
 }
 
 /* Text align */

@@ -350,7 +350,7 @@ h1{
 }
 
 .web-img{
-	width: 550px;
+	width: clamp(300px,1.5vw,600px);
 	height: auto;
 }
 

@@ -61,8 +61,8 @@ const Web = (props)=>{
 				<div className={`pos-abs w-100 h-per flex jc-flex al-flex bg-dark front fade-1 ${!props.mobile&&"p-20"}`}>
 					<div className={`flex flx-col jc-flex al-flex h-per hide-bar pos-rel ${props.mobile&&"w-100"}`}>
 						<FontAwesomeIcon className="clr-dark pos-abs exit-1" icon="times-circle" onClick={props.reset}/>
-						{!props.mobile&&<img src={props.webDesc.src} alt={props.webDesc.title} className="web-img img-shdw h-50" id={props.webDesc.id}/>}
-						<div className={`flex flx-col al-flex jc-flex hide-x thmb p-10 thin ${props.mobile?"w-100 h-per":"w-50 h-50"}`}>
+						{!props.mobile&&<img src={props.webDesc.src} alt={props.webDesc.title} className="web-img img-shdw" id={props.webDesc.id}/>}
+						<div className={`flex flx-col al-flex jc-flex hide-x thmb p-10 thin ${props.mobile?"w-100 h-per":"w-50"}`}>
 							<div className={`flex h-cus over-hide flow-x-scr thmb w-100 ${props.mobile&&"mt-5"}`}>
 							{data[props.webDesc.ndx].view.map((src,ndx)=>(
 								<div className="fit ml-2 hov w-50 scr-el" key={ndx} onClick={props.disp}>
@@ -99,7 +99,7 @@ const WebMob = (props)=>{
 						<img src={cur.src} alt={cur.title} className="web-img img-shdw" id={cur.id}/>
 					}
 					
-					<div className="mt-5 flex flx-col mr-0">
+					<div className="mt-5 flex flx-col mr-0 w-100">
 
 						{!props.land&&
 							<div className="flex mt-5 h-cus over-hide flow-x-scr thmb w-100">
@@ -112,11 +112,11 @@ const WebMob = (props)=>{
 						}
 
 						<h4 className="mont bold mt-5 txt-r title cursor" onClick={()=>props.transfer(cur.code)}>{cur.title}</h4>
-						<p className="lato-r mt-2 txt-r cur-info w-50">{cur.info}</p>
+						<p className="lato-r mt-2 txt-r cur-info w-100">{cur.info}</p>
 						<div className="mt-5 flex al-flex jc-flex">
 							{cur.tech.map((tech,index)=>
 								(
-								 	<FontAwesomeIcon icon={["fab", tech]} id={tech} key={index} className={`${(index === 3||4)&&"ml-10 mr-10"} tech`}/>
+								 	<FontAwesomeIcon icon={["fab", tech]} id={tech} key={index} className={`${(index === 2||3)&&"ml-10 mr-10"} tech`}/>
 								))}
 						</div>
 						<p onClick={()=>props.redirect(cur.site)} className="view cursor p-10 btn-grd al-ce mt-2 br-15 w-50 trans-1 lato bold">View Project</p>
