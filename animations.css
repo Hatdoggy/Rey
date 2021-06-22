@@ -10,6 +10,8 @@
     animation: .5s fadeInLeft;
 }.fadeInRight{
     animation: .5s fadeInRight;
+}.fadeInUp{
+    animation: .5s fadeInUp;
 }
 
 a:hover div{
@@ -88,6 +90,29 @@ aside h4.bold::after,p.nav::after{
         transform: translateY(0);
     }
 }
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframe fadeInUp{
+   0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @-webkit-keyframes slide {
     0% {
