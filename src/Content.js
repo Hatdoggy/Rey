@@ -39,7 +39,7 @@ const Main = (prop)=>{
 		show.style.display = "flex";
 	}
 
-	const project = async (val)=>{
+	const project = async (val,hide)=>{
 		setTimeout(()=>{
 			prop.proj(val);
 			let target = document.querySelector('.arw');

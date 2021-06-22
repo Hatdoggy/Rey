@@ -162,6 +162,9 @@ table {
 	cursor: pointer;
 }.vio:hover{
 	color: #d53a9d;
+}.clr-vio:hover path{
+	fill: #743ad5;
+	cursor: pointer;
 }
 
 /* Grid display */
