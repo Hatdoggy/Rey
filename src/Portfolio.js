@@ -91,12 +91,16 @@ const WebPort = ()=>{
   				elem.style.marginTop = "5%!important";
   			},1500)
   		}
+
+  		data.forEach((elem)=>{
+  			console.log(elem)
+  		})
   	})
 
   	const arw = (dir)=>{
   		let scrll = document.querySelector("#web-scrll");
   		let where = document.querySelectorAll('.scr-itm');
-  		if(dir === "right"&&curNdx < 2){
+  		if(dir === "right"&&curNdx < data.length-1){
   			curNdx++;
   		}else if(dir === "left" && curNdx >0){
   			curNdx--;

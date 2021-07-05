@@ -51,7 +51,22 @@ const data = [
 		id:"kp",
 		code:"https://github.com/Hatdoggy/brochure-website",
 		ndx:2
-	}	
+	},
+	{	
+		title:"Activities API",
+		info:"A node express API about the different activities you can do and experience in the Philippines",
+		tech:["html5","css3-alt","js","node-js"],
+		src:"./images/api/docs.JPG",
+		site:"https://hatdoggy.github.io/Deceased-Nucleus/",
+		class:"img-shdw h-per api",
+		view:[	"./images/api/docs.JPG",
+				"./images/api/act.JPG",
+				"./images/api/pic.JPG",
+				"./images/api/calls.JPG"],
+		id:"api",
+		code:"https://activitiesapi.herokuapp.com/",
+		ndx:3
+	}		
 ];
 
 export default data;
