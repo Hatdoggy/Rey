@@ -23,7 +23,7 @@ const Choice = (props)=>{
 				<WebSvg/>
 				<div className="flex jc-flex al-flex flx-col projects">
 					<h4 className="clr-wht mont al-ce mt-2">Web Projects</h4>
-					<p className="clr-wht lato-r al-ce mt-5 w-80">These are my projects from my past jobs in graphic design, the software used in creating these designs are mostly Adobe Photoshop and Adobe Illustrator</p>
+					<p className="clr-wht lato-r al-ce mt-5 w-80">Projects that were built using my knowledge and skills in HTML,CSS ,JavaScript, JQuery ,React and some API</p>
 				</div>
 			</div>
 			<div className="flex h-80 ml-2 bg-toR br-50 jc-flex flx-col al-flex trans popShdw  glass w-50 p-20 sub" onClick={()=>props.choose('graph','design')}>
