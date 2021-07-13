@@ -1,3 +1,5 @@
+@import './var.css';
+
 /*Display*/
 
 .flex{
@@ -6,6 +8,8 @@
 	flex-direction: column;
 }.flx-shr{
 	flex-shrink: 0;
+}.flx-wrp{
+	flex-wrap: wrap;
 }
 
 .grid{
@@ -76,12 +80,16 @@ aside h4{
 
 .m-2{
 	margin: 2%;
+}.m-5{
+	margin: 5%;
 }
 
 .mb-2{
 	margin-bottom: 2%;
 }.mb-5{
 	margin-bottom: 5%;
+}.mb-10{
+	margin-bottom: 10%;
 }
 
 .p-10{
@@ -90,12 +98,16 @@ aside h4{
 	padding: 15px;
 }.p-20{
 	padding: 20px;
+}.p-100{
+	padding: 100px;
 }
 
 /* Width and Height */
 
 .w-20{
 	width: 20%;
+}.w-25{
+	width: 25%;
 }.w-30{
 	width: 30%;
 }.w-50{
@@ -132,7 +144,9 @@ aside h4{
 	height: 70%;
 }.h-75{
 	height: 75%;
-}.h-100{
+}.h-80{
+	height: 80%;
+	}.h-100{
 	height: 100vh;
 }.h-per{
 	height: 100%;
@@ -196,6 +210,8 @@ aside h4{
 
 .al-ce{
 	text-align: center;
+}.al-r{
+	text-align: right;
 }
 
 .txt-jst{
@@ -216,6 +232,8 @@ aside h4{
 	z-index: 60;
 }.back .bg{
 	height: 100vh;
+}.bet{
+	z-index: 10;
 }.mid{
 	z-index: 1;
 }.z-bg{
@@ -229,7 +247,7 @@ aside h4{
 }.pos-abs{
 	position: absolute;
 }.pos-fix{
-	position: fixed;
+	position: fixed!important;
 }.pos-stk{
 	position: sticky;
 }
@@ -247,180 +265,19 @@ aside h4{
 	display: block;
 }
 
-/* Media query for mobile structure */
+/* newUI */
 
-@media only screen 
-and (min-device-width : 320px){
-/*Display*/
-
-input{
-	font-family: 'Lato', sans-serif;
-	font-size: 20px!!important;
+.br-15{
+	border-radius: 15px;
+}.br-50{
+	border-radius: 50px;
+}.navBr{
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
-.flex{
-	display: flex!important;
-}.flx-col{
-	flex-direction: column!important;
-}
+/* opacity */
 
-.grid{
-	display: grid!important;
-}
-
-.jc-flex{
-	justify-content: center!important;
-}.jc-flx-e{
-	justify-content: flex-end!important;
-}.jc-flx-eve{
-	justify-content: space-evenly!important;
-}.al-flex{
-	align-items: center!important;
-}.al-flx-e{
-	align-items: flex-end!important;
-}
-
-/*Margins and Paddings*/
-
-.ml-2{
-	margin-left: 2%!important;
-}.ml-5{
-	margin-left: 5%!important;
-}.ml-10{
-	margin-left: 10%!important;
-}.ml-30{
-	margin-top: 30%!important;
-}.ml-auto{
-	margin-left: auto!important!important;
-}.ml-in{
-	margin-left: inherit!important!important;
-}
-
-.mr-2{
-	margin-right: 2%!important;
-}.mr-5{
-	margin-right: 5%!important;
-}.mr-10{
-	margin-right: 10%!important;
-}
-
-.mt-2{
-	margin-top: 2%!important;
-}.mt-5{
-	margin-top: 5%!important;
-}.mt-10{
-	margin-top: 10%!important;
-}.mt-15{
-	margin-top: 15%!important;
-}.mt-30{
-	margin-top: 30%!important;
-}.mt-auto{
-	margin-top: auto!important;
-}
-
-.mb-2{
-	margin-bottom: 2%!important;
-}.mb-5{
-	margin-bottom: 5%!important;
-}
-
-.p-10{
-	padding: 10px!important;
-}.p-20{
-	padding: 20px!important;
-}
-
-/* Width and Height */
-
-.w-20{
-	width: 20%!important;
-}.w-50{
-	width: 50%!important;
-}.w-60{
-	width: 60%!important;
-}.w-65{
-	width: 65%!important;
-}.w-75{
-	width: 75%!important;
-}.w-80{
-	width: 80%!important;
-}.w-100{
-	width: 100%!important;
-}.w-vw{
-	width:100vw!important;
-}.w-auto{
-	width: auto!important;
-}
-
-.h-30{
-	height: 30%!important;
-}.h-70{
-	height: 70%!important;
-}.h-75{
-	height: 75%!important;
-}.h-100{
-	height: 100vh!important;
-}.h-per{
-	height: 100%!important;
-}.h-auto{
-	height: auto!important;
-}
-
-/* overflow */
-
-.over-hide{
-	overflow: hidden!important;
-}.flow-y-scr{
-	overflow-y: scroll!important;
-}.hide-x{
-	overflow-x: hidden!important;
-}.flow-x-scr{
-	overflow-x: scroll!important;
-}
-
-/* Text align */
-
-.al-ce{
-	text-align: center!important;
-}
-
-.txt-jst{
-	text-justify: inter-character!important;
-}
-
-/*position*/
-
-.back{
-	position: relative!important;
-	z-index: -1!important;
-}.front{
-	position: relative!important;
-	z-index: 55!important;
-}.front-1{
-	z-index: 55!important;
-}.frnt-top{
-	z-index: 60!important;
-}.back .bg{
-	height: 100vh!important;
-}.mid{
-	z-index: 1!important;
-}.z-bg{
-	z-index: 0!important;
-}
-
-.pos-rel{
-	position: relative!important;
-}.pos-abs{
-	position: absolute!important;
-}.pos-fix{
-	position: fixed!important;
-}.pos-stk{
-	position: sticky!important;
-}
-
-.top-0{
-	top: 0!important;
-}.bot-0{
-	bottom: 0!important;
-}
+.op-60{
+	opacity: 60%;
 }
