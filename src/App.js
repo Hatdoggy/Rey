@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import {clicked} from './Content.js'
 import Loading from './Loading.js'
 import { useMediaQuery } from 'react-responsive';
 import {Choice,Main,Contacts,Skills,Navi,NavCont} from './Components.js';
