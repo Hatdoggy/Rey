@@ -4,176 +4,176 @@ const des = [
 	{	
 		name:"alien",
 		link:"./images/illus/alien.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"cat1",
 		link:"./images/illus/cat1.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"cat2",
 		link:"./images/illus/cat2.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"dino1",
 		link:"./images/illus/dino1.jpg",
-		type:"fit long illus",
+		type:"bet fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"dino2",
 		link:"./images/illus/dino2.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"dino3",
 		link:"./images/illus/dino3.jpg",
-		type:"fit long illus",
+		type:"bet fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"fish",
 		link:"./images/illus/fish.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"iguana",
 		link:"./images/illus/iguana.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"octopus",
 		link:"./images/illus/octopus.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"orca1",
 		link:"./images/illus/orca1.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"orca2",
 		link:"./images/illus/orca2.jpg",
-		type:"fit long illus",
+		type:"bet fit long illus",
 		id:"illus"
 	},
 	{	
 		name:"shirt7",
 		link:"./images/Shirt/shirt7.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"purple",
 		link:"./images/illus/purple.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"temple",
 		link:"./images/illus/temple.jpg",
-		type:"fit none illus",
+		type:"bet fit none illus",
 		id:"illus"
 	},
 	{	
 		name:"mug1",
 		link:"./images/mug/mug1.jpg",
-		type:"fit none mug",
+		type:"bet fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"mug2",
 		link:"./images/mug/mug2.jpg",
-		type:"fit none mug",
+		type:"bet fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"mug3",
 		link:"./images/mug/mug3.jpg",
-		type:"fit none mug",
+		type:"bet fit none mug",
 		id:"mug"
 	},
 	{	
 		name:"shirt2",
 		link:"./images/Shirt/shirt2.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"mug4",
 		link:"./images/mug/mug4.jpg",
-		type:"fit none mug",
+		type:"bet fit none mug",
 		id:"mug"
 	},
 		{	
 		name:"mag1",
 		link:"./images/print/mag1.jpg",
-		type:"fit none",
+		type:"bet fit none",
 		id:"print"
 	},
 	{	
 		name:"mag2",
 		link:"./images/print/mag2.jpg",
-		type:"fit none",
+		type:"bet fit none",
 		id:"print"
 	},
 	{	
 		name:"mag3",
 		link:"./images/print/mag3.jpg",
-		type:"fit none",
+		type:"bet fit none",
 		id:"print"
 	},
 	{	
 		name:"poster",
 		link:"./images/print/poster.jpg",
-		type:"fit none",
+		type:"bet fit none",
 		id:"print"
 	},
 	{	
 		name:"shirt1",
 		link:"./images/Shirt/shirt1.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"shirt3",
 		link:"./images/Shirt/shirt4.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"shirt5",
 		link:"./images/Shirt/shirt5.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 		{	
 		name:"shirt6",
 		link:"./images/Shirt/shirt6.jpg",
-		type:"fit shirt",
+		type:"bet fit shirt",
 		id:"shirt"
 	},
 	{	
 		name:"poster1",
 		link:"./images/print/poster1.jpg",
-		type:"fit none",
+		type:"bet fit none",
 		id:"print"
 	},
 
 	{	
 		name:"dog",
 		link:"./images/illus/dog.jpg",
-		type:"fit long illus",
+		type:"bet fit long illus",
 		id:"illus"
 	},
 ];
@@ -183,7 +183,7 @@ export default des;
 export const Background = (prop)=>{
 	return(
 		<section className="back pos-abs w-100 h-100">
-			<span className={prop.pos === "top"?"top-line hor-line":"bot-line hor-line"}></span>
+			<span className={prop.pos === "top"?"top-line z-bg pos-fix hor-line":"bot-line z-bg pos-fix hor-line"}></span>
 		</section>
 	);
 }
@@ -191,7 +191,7 @@ export const Background = (prop)=>{
 export const Circ = (prop)=>{
 
 	return(
-	<svg className={prop.pos === "top"?"circ circ-top back pos-abs":"circ circ-bot back pos-abs"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.49 295.96">
+	<svg className={prop.pos === "top"?"circ circ-top z-bg pos-fix pos-abs":"circ circ-bot z-bg pos-fix pos-abs"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.49 295.96">
 	
 	<g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
 
@@ -237,4 +237,10 @@ export const Modal = (prop)=>{
 	);
 }
 
+export const CircBg = (props)=>{	
+
+	return(
+		<span className={props.pos}></span>
+	)
+}
 

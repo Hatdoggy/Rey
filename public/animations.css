@@ -14,6 +14,16 @@
     animation: .5s fadeInUp;
 }
 
+/* Loading SVG */
+.load-cont{
+    width: 50%;
+}
+
+.fullRot{
+    transition: .5s ease-in-out;
+    animation: 1s fullRotate;
+}
+
 a:hover div{
     animation: slide 1.5s;
 }
@@ -39,21 +49,16 @@ a:hover div{
 }
 
 /* Nav gradient line */
-
-aside h4.bold::after,p.nav::after{
+p.nav::after{
   content: "";
   display:block;
   position:absolute;
   top: calc(80% + 5px);
-  width:0%;
-  height:1.5px;
-  background-image: linear-gradient(to left, #743ad5, #d53a9d);
-  transition:0.2s width ease-in-out,0.2s transform ease-in-out;
-}aside h4.bold:hover,div.filter:hover{
-	cursor: pointer;
-}aside h4.bold:hover::after{
-	width:75%;
-}div.filter:hover p.nav::after{
+  background-color: black;
+  transition: .2s ease-in-out;
+  width:0;
+  height:1px;
+}p.nav:hover:after{
 	width: 100%;
 }div.filter:hover .tech1{
 	transform: rotate(180deg);
@@ -88,6 +93,24 @@ aside h4.bold::after,p.nav::after{
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes fullRotate {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframe fullRotate{
+   0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 

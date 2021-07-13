@@ -73,11 +73,11 @@ export default data;
 
 const Web = (props)=>{
 	return(
-				<div className={`pos-abs w-100 h-per flex jc-flex al-flex bg-dark front fade-1 ${!props.mobile&&"p-20"}`}>
-					<div className={`flex flx-col jc-flex al-flex h-per hide-bar pos-rel ${props.mobile&&"w-100"}`}>
+				<div className={`pos-abs w-auto h-80 flex jc-flex al-flex bg-dark front br-15 fade-1 popShdw p-20 webPop`}>
+					<div className={`flex jc-flex al-flex h-per hide-bar pos-rel webSub ${props.mobile&&"w-100"}`}>
 						<FontAwesomeIcon className="clr-dark pos-abs exit-1" icon="times-circle" onClick={props.reset}/>
-						{!props.mobile&&<img src={props.webDesc.src} alt={props.webDesc.title} className="web-img img-shdw" id={props.webDesc.id}/>}
-						<div className={`flex flx-col al-flex jc-flex hide-x thmb p-10 thin ${props.mobile?"w-100 h-per":"w-50"}`}>
+						<img src={props.webDesc.src} alt={props.webDesc.title} className="w-50 img-shdw dispImg" id={props.webDesc.id}/>
+						<div className={`flex flx-col al-flex jc-flex hide-x thmb p-20 thin popShdw w-50 ml-5`}>
 							<div className={`flex h-cus over-hide flow-x-scr thmb w-100 ${props.mobile&&"mt-5"}`}>
 							{data[props.webDesc.ndx].view.map((src,ndx)=>(
 								<div className="fit ml-2 hov w-50 scr-el" key={ndx} onClick={props.disp}>
@@ -87,7 +87,7 @@ const Web = (props)=>{
 							</div>
 			
 							<p className="lato-r mt-2 al-ce">{props.webDesc.info}</p>
-							<p className="lato bold mt-2 title cursor btn-grd clr-wht p-10 w-50 al-ce hov"onClick={()=>props.transfer(props.webDesc.code)}>{props.webDesc.title}<FontAwesomeIcon className="ml-2" icon={["fab","github"]}/></p>
+							<p className="lato bold mt-2 title cursor drk-glass popShdw shadow p-20 w-50 al-ce hov"onClick={()=>props.transfer(props.webDesc.code)}>{props.webDesc.title}<FontAwesomeIcon className="ml-2" icon={["fab","github"]}/></p>
 						</div>				
 					</div>
 				</div>
