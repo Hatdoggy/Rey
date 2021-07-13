@@ -1,0 +1,17 @@
+:root {
+  --gradient: linear-gradient(to left,#743ad5, #d53a9d);
+  --rev: linear-gradient(to right,#743ad5, #d53a9d);
+  --white: #ffffff;
+  --grad: linear-gradient(to right,rgba(255,132,132,1),rgba(205,115,185,1),rgba(159,94,243,1));
+  --gradR: linear-gradient(to bottom right,rgba(255,132,132,1),rgba(205,115,185,1),rgba(159,94,243,1));
+  --gradL: linear-gradient(to left,rgba(255,132,132,1),rgba(205,115,185,1),rgba(159,94,243,1));
+  --gradBL: linear-gradient(to bottom left,rgba(255,132,132,1),rgba(205,115,185,1),rgba(159,94,243,1));
+  --botr: linear-gradient(to bottom right,rgba(255,255,255,.2),rgba(255,255,255,.1));
+  --botl: linear-gradient(to bottom left,rgba(255,255,255,.2),rgba(255,255,255,.1));
+  --shdw: box-shadow: -3px 9px 17px -7px rgba(0,0,0,0.62);
+}
+
+/*
+          -webkit-box-shadow: -3px 9px 17px -7px rgba(0,0,0,0.62);
+          -moz-box-shadow: -3px 9px 17px -7px rgba(0,0,0,0.62);
+*/

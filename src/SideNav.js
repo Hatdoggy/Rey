@@ -151,3 +151,14 @@ export const Footer = (prop)=>{
 		</footer>
 		);
 }
+
+export const NewNav = ()=>{
+	return(
+		<nav className="flex jc-flex al-flex p-20 w-100 popShdw">
+			<div className="flex jc-flex al-flex">
+				<Logo/>
+				<FontAwesomeIcon icon="bars" className="tech ml-2" clr-wht/>
+			</div>
+		</nav>
+	)
+}

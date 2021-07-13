@@ -6,12 +6,7 @@
 @import './popUp.css';
 @import './structure.css';
 @import './queries.css';
-
-:root {
-  --gradient: linear-gradient(to left,#743ad5, #d53a9d);
-  --rev: linear-gradient(to right,#743ad5, #d53a9d);
-  --white: #ffffff;
-}
+@import './var.css';
 
  a, a:focus, a:active {
       text-decoration: none;
@@ -21,6 +16,7 @@
 
 html{
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -67,6 +63,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+p{
+	line-height: 1.5;
+}
 
 /*Colors*/
 .bg-white{
@@ -79,6 +78,52 @@ table {
 	color: white;
 }.clr-dark{
 	color: black;
+}.bg-grad{
+	background-image: var(--grad);
+	background-size: cover;
+}.bg-toL{
+	background-image: var(--botl);
+	position: relative;
+}.bg-toR{
+	background-image: var(--botr);
+	position: relative;
+}.bgSvg path{
+	filter: blur(4px);
+}.popUp:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px);	
+  z-index: -1;
+  box-shadow: inset 0 0 300px rgba(255,255,255,.6);
+}
+
+.glass{
+	border: 1px solid transparent;
+}.glass:hover,.glassBtn:hover{
+	cursor: pointer;
+	border: 1px solid white;
+}.glassBtn{
+	background-image: var(--botr);
+	background-size: cover;
+	border: 1px solid transparent;
+}.drk-glass{
+	background-color: transparent;
+	border: 1px solid transparent;
+}.drk-glass:hover{
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.bg-toL::before,.bg-toR::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+	filter: blur(2rem);
 }
 
 .btn-fb{
@@ -97,7 +142,7 @@ table {
 	background-color: white;
 	width: 25px;
 	top: -15%;
-	left: -15%;
+	left: -20%;
 	opacity: .3;
 }
 
@@ -106,6 +151,9 @@ table {
 	height: 50px;
 	width: auto;
 	margin-left: 2%;
+	position: absolute;
+	top: 2%;
+	left: 0;
 }
 
 .shadow {
@@ -116,6 +164,8 @@ table {
 	-webkit-box-shadow: 0 2px 2px 2px #5555550f;
   -moz-box-shadow:    0 2px 2px 2px #5555550f;
 	 box-shadow: 0 2px 2px 2px #5555550f;
+}.popShdw{
+	box-shadow: 0 3px 5px 1px rgba(0,0,0,.1);
 }
 
 .bg-trans{
@@ -145,11 +195,11 @@ table {
 .exit,.exit-1{
 	font-size: 24px;
 }.exit{
-	top: 25px;
-	right: 15px;
+	top: 2%;
+	right:0;
 }.exit-1{
 	top: 0;
-	right: 10%;
+	right: 0;
 }.exit-1:hover{
 	cursor: pointer;
 	opacity: .8;
@@ -173,7 +223,7 @@ table {
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   	grid-gap: 1rem;
   	grid-auto-flow: dense;
-  	margin-top: 10%;
+  	margin-top: 2%;
 }.des-grid img:nth-child(4n) {
   grid-column: span 1;
   grid-row: span 1;
@@ -187,8 +237,6 @@ table {
 	opacity: 0.8;
 	transition: .5s;
 	cursor: pointer;
-}.nav:hover{
-	cursor: pointer;
 }
 
 #des-main .tech1{
@@ -199,8 +247,6 @@ table {
 	align-items: center;
 	width: 50%;
 	transition: .5s;
-}.filter:hover{
-	color:#743ad5;
 }
 
 .circ {
@@ -246,9 +292,9 @@ h1{
 }h3{
   font-size: clamp(1.5rem, 5vw, 3rem);
 }h4{
-  font-size: clamp(1.25rem, 1.5vw, 2.5rem);
+  font-size: clamp(1.3rem, 1.5vw, 2.5rem);
 }p,label{
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
 }
 
 .icon-cont svg{
@@ -331,7 +377,7 @@ h1{
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: 70%;
+	height: auto;
 }.prjBtn h4{
 	background-size: 150%; 
 }.prjBtn h4:hover{
@@ -375,7 +421,7 @@ div.web-des:nth-child(2) > div:nth-child(2) {
 /* Icons  */
 
 .tech{
-	font-size: 32px;
+	font-size: 24px;
 	margin-left: 2%;
 	transition: .5s;
 }
@@ -390,14 +436,6 @@ div.web-des:nth-child(2) > div:nth-child(2) {
 	background-size: 150%; 
 }.view:hover{
 	background-position: right;
-}
-
-/*Web portoflio line*/
-.line{
-	width: 2px;
-	background-color: black;
-	left: 730px;
-	transition: 3s;
 }
 
 
@@ -428,5 +466,28 @@ input:focus,textarea:focus {
 	left: 15%;
 }
 
-
-
+/* Circle BG */
+.circTop,.circMid,.circBot{
+	filter: blur(5px);
+	border-radius: 100%;
+	opacity: .8;
+	position: fixed;
+	z-index: -1;
+}.circTop{
+	width: 350px;
+	height: 350px;
+	background-image: var(--gradR);
+	right: 0;
+	top: 0;
+}.circMid{
+	width: 200px;
+	height: 200px;
+	background-image: var(--gradL);
+	top: 45%;
+}.circBot{
+	width: 500px;
+	height: 500px;
+	background-image: var(--gradBL);
+	bottom: 0;
+	right: 25%;
+}

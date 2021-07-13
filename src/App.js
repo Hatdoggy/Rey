@@ -1,170 +1,93 @@
 import React,{useState,useEffect} from 'react';
-import Side,{Header,Nav,Footer} from './SideNav.js'
-import Main,{Mob_main} from './Content.js'
-import Portfolio, {DesPort} from './Portfolio.js'
 import Loading from './Loading.js'
-import des,{Background,Circ,Modal}from './Cloud'
 import { useMediaQuery } from 'react-responsive';
+import {Choice,Main,Contacts,Skills,Navi,NavCont} from './Components.js';
+import load from './func.js'; 
+import des,{Circ,Background,CircBg,Modal} from './Cloud.js';
+import WebPort,{DesPort} from './Portfolio.js';
+
 
 const App = ()=>{
 
 	const [fin,setFin] = useState(false);
-	const [main,setMain] = useState(true);
-	const [menu,setMenu] = useState(false);
-  const mobile = useMediaQuery({
-     query: '(max-width: 800px)'
-   })
-  const [curPage,setPage] = useState("");
+	const [nav,dispNav] = useState(false);
+	const [modal,dispModal] = useState({
+		disp:false,
+		ndx:0,
+		obj:[]
+	})
 
-	const [type,setType] = useState({
-		main:true,
-		other:false
-	});
-
-	const [proj,setProj] = useState({
-		web:false,
+	const [skills,setSkill] = useState({
+		main:false,
 		des:false,
-		clicked:false
-	});  	
+		svg:true
+	})
 
-	const project = async (target)=>{
+	const [projChoice,setChoice] = useState({
+		graph:false,
+		web:false
+	})
 
-		setProj({
-			web:false,
-			des:false,
-			clicked:true,			
-			[target]:true
-		})
-
-		if(mobile){
-			document.querySelector("#main-top").classList.remove('over-hide');
-		}
-	};
-
-	const res = (val)=>{
-		setProj({
-			clicked:false
-		});
-
-		setType({
-			main:true,
-			other:false
-		})
-
-		let icons = document.querySelector("#greet-icon");
-		if(!mobile){
-			if(val === 'Contact'){
-				icons.classList.add('port');
-			}else{
-				icons.classList.remove('port');
-			}
-		}
-	};
-
-	const test = (val,arr,trgt,body)=>{
-
-		if(typeof arr != "undefined"){
-
-			setTimeout(()=>{
-			arr[val].style.strokeOpacity =1;
-			val++;
-			if(val<arr.length){
-				test(val,arr,trgt,body);
-			}else{
-				trgt.forEach( function(elem) {
-					elem.style.fill = "white";
-				});
-				arr.forEach( function(elem) {
-					elem.style.stroke = "white";
-				});
-				setFin(true);
-				body.classList.remove("loading-screen");
-			}
-			},500);
-		}
-	}	
-
-	const [head,setHead] = useState(false);
-
-	const scroll = ()=>{
-		let time;
-		let target = document.querySelector('html').scrollTop;
-		target >= 716?setHead(true):setHead(false);	
+	const updFin = (val)=>{
+		setFin(val)
 	}
 
 	useEffect(()=>{
 
-		document.addEventListener('scroll',scroll);
 		let foot = document.querySelector('footer');
 		
 		if(!fin){
 			let parent  = document.querySelector("#border").children;
 			let trgt = document.querySelectorAll(".change");
 			let arr = [];
-			let x = 0 ;
+			let ndx = 0 ;
 			for (var i = 0 ; i<parent.length; i++) {
 				arr.push(parent[i]);
 			}
 			
 			let body = document.querySelector("body");
 			body.classList.add("loading-screen");
-
-			test(x,arr,trgt,body);			
+			load(ndx,arr,trgt,body,updFin);
 		}
-		if(mobile)document.querySelector("#background").style.display = 'none'
 
 	})	
 
-	const ret = (val)=>{
-
-		window.scrollTo({
-			top:0,
-			behavior:'smooth'
+	const chosen = (val,id)=>{
+		setChoice({
+			graph:false,
+			web:false,
+			[val]:true
 		})
 
+		let scroll = document.querySelector('html');
 		setTimeout(()=>{
-			res();
-		},1000);
+			let targ = document.querySelector(`#${id}`);
+			scroll.scrollTop = targ.offsetTop;
+		},500);
+	}
 
-		if(mobile){
-
-			let foot = document.querySelector('footer div');
-
-				if(foot){
-					val === "Contact"?foot.classList.add('port'):foot.classList.remove('port')
-				}
-			setPage(val);
-			setMenu(false);
-
-		}
-		else{
-			let icons = document.querySelector("#greet-icon");
-			(val === "Contact")?icons.style.display = 'none!important':icons.style.display = 'inherit!important';
-		}
+	const type = (val)=>{
+		
+		setSkill({
+			main:false,
+			other:false,
+			[val]:true
+		})
 
 	}
 
-/*Modal functions*/
-
-const [modal,dispModal] = useState({
-	disp:false,
-	ndx:0,
-	obj:[]
-})
-
-const imgClick = (disp,ndx,type)=>{
+	const imgClick = (disp,ndx,type)=>{
 
 	let arr = (typeof type !="undefined"&&des.filter((elem)=>elem.id === type));
-		console.log(arr)
+		console.log(disp)
 
-	if(disp ){	
+	if(disp){	
 		dispModal({
-
 			disp:true,
 			ndx:[ndx],
 			obj:(typeof type !="undefined"?[...arr]:[])
 		})
-
+		console.log("You went here")
 	}else{
 
 		dispModal({
@@ -173,51 +96,36 @@ const imgClick = (disp,ndx,type)=>{
 			obj:[]
 		})
 
+		}
+
 	}
 
-}
 
   return(
 
   	fin?
-  		mobile?
-  		<div className="flex flx-col h-100 pos-rel flow-y-scr hide-x">
+  	<main className="pos-rel flex flx-col">
+  	  <Circ pos="top"/>
+  	  {nav&&<NavCont disp={dispNav}/>}
+  		<CircBg pos="circTop"/>
+  		<CircBg pos="circMid"/>
+  	  	<div className="flex pos-rel h-100 mr-5 ml-5 flex flx-col br-50 fade-1 trans" id="borders">
+  				<section className="h-100">
+  					<Navi disp={dispNav}/>
+  					<Main skills={skills} type={type}/>
+  					<Skills/>
+  					<Choice choose={chosen}/>
+  						{projChoice.web&&<WebPort/>}
+  						{projChoice.graph&&<DesPort set={imgClick}/>}
+  					<Contacts/>
+  				</section>
 
-  			<img className="bg-2 pos-abs back bck-img" src="./images/BG.png" alt="puzzle" loading="lazy"/>
-  			<Circ pos="top"/>
-  			<Header res={res} main={main} ret={ret} menu={setMenu} cur={curPage}/>
-
-  			<Mob_main type={type} ret={ret} proj={project} click={proj.clicked} cur={proj.des} setType={setType} set={imgClick} web={proj.web} des={proj.des}/>
-
-      	<Circ pos="bot"/>
-
-  	 		{modal.disp&&<Modal ndx={modal.ndx} data={modal.obj.length !==0? modal.obj:des} set={imgClick}/>}
-  	 		{menu&&<Nav res={res} main={main} ret={ret} menu={setMenu}/>}
-  	 		<img className="bg-1 pos-abs back bck-img" src="./images/BG.png" alt="puzzle" loading="lazy"/>
-  	 		<Footer res={res} main={main} ret={ret} menu={setMenu} des={proj.des} web={proj.web} set={imgClick}/>
-  	 	</div>
-  		:<div className="flex flx-col">
-
-  		<Circ pos="top"/>
-  		{head&&<Header res={res} main={main} ret={ret}/>}
-  		<Background pos="top"/>
-
-     	<div className="mr-10 ml-10 flex" id="main-top">
-      		<Main proj={project} click={proj.clicked} cur={proj.des} setType={setType} type={type}/>
-      		<Side res={res} main={main}/>
-     	</div>
-
-      {proj.web&&
-      	<div className="h-per">
-					<Portfolio/>
-      	</div>
-      }
-      {proj.des&&<DesPort set={imgClick}/>}
-      <Circ pos="bot"/>
+  			</div>	
+  		<CircBg pos="circBot"/>
+  		<Circ pos="bot"/>
   		<Background pos="bot"/>
-
-  	 {modal.disp&&<Modal ndx={modal.ndx} data={modal.obj.length !==0? modal.obj:des} set={imgClick}/>}
-    </div>
+  		{modal.disp&&<Modal ndx={modal.ndx} data={modal.obj.length !==0? modal.obj:des} set={imgClick}/>}
+  	</main>	
     :
     <Loading/>
 

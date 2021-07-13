@@ -3,7 +3,7 @@ import React,{useEffect} from 'react';
 const Loading = (prop)=>{
 
 	return(
-		<div>
+		<div className="flex jc-flex al-flex">
 
 			<svg width="308" height="507" viewBox="0 0 308 507" fill="none" className="load-cont" xmlns="http://www.w3.org/2000/svg">
 			<g id="LogoAsset 4 1" clipPath="url(#clip0)">
