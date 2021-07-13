@@ -73,7 +73,6 @@ const App = ()=>{
 			other:false,
 			[val]:true
 		})
-		clicked(val)
 
 	}
 
