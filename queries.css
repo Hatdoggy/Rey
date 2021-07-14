@@ -187,4 +187,14 @@ and (min-width: 1400px) {
 	.exit,.exit-1{
 		font-size: 28px!important;
 	}
+
+	div#websites .webItem{
+		width: 500px;
+	}div#websites p.glassBtn{
+		width: 50%!important;
+	}
+
+	.des-grid{
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))!important;
+	}
 }
