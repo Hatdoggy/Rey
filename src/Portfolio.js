@@ -44,10 +44,6 @@ const WebPort = ()=>{
   	}	
 
   	const showInfo = (info)=>{
-  		if(mobile){
-  			let targ = document.querySelector('html');
-  			targ.style.overflowY = 'hidden';  			
-  		}
 
   		show({
   			display:true,
@@ -64,10 +60,6 @@ const WebPort = ()=>{
   	}
 
   	const reset = ()=>{
-  		if(mobile){
-  			let targ = document.querySelector('html');
-  			targ.style.overflowY = 'scroll';
-  		}
 
    		show({
 			display:false,
@@ -101,17 +93,6 @@ const WebPort = ()=>{
   			},1500)
   		}
   	})
-
-  	const arw = (dir)=>{
-  		let scrll = document.querySelector("#web-scrll");
-  		let where = document.querySelectorAll('.scr-itm');
-  		if(dir === "right"&&curNdx < data.length-1){
-  			curNdx++;
-  		}else if(dir === "left" && curNdx >0){
-  			curNdx--;
-  		}
-  		scrll.scrollLeft = where[curNdx].offsetLeft;
-  	}
 
   	const transfer = (url)=>{
 		window.location.href = url;
