@@ -7,7 +7,7 @@ const data = [
     info: "A simple landing page where user gets 3 spins to spin for a chance at winning jackpot prize",
     tech: ["html5", "css3-alt", "React JS"],
     src: "./images/spin/pic1.png",
-    site: "https://github.com/Hatdoggy/casino/",
+    site: "http://pakdu.ako.monster/Roulette/original/",
     class: "img-shdw h-per decNuc",
     view: [
       "./images/spin/pic1.png",
@@ -16,7 +16,7 @@ const data = [
       "./images/spin/pic4.png",
     ],
     id: "decNuc",
-    code: "https://github.com/Hatdoggy/casino",
+    code: "http://pakdu.ako.monster/Roulette/original/",
     ndx: 0,
   },
   {
