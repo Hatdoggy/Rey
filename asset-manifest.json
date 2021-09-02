@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/Rey/static/js/main.9d8b4787.chunk.js",
-    "main.js.map": "/Rey/static/js/main.9d8b4787.chunk.js.map",
-    "runtime-main.js": "/Rey/static/js/runtime-main.d1868e56.js",
-    "runtime-main.js.map": "/Rey/static/js/runtime-main.d1868e56.js.map",
-    "static/js/2.581d8629.chunk.js": "/Rey/static/js/2.581d8629.chunk.js",
-    "static/js/2.581d8629.chunk.js.map": "/Rey/static/js/2.581d8629.chunk.js.map",
-    "index.html": "/Rey/index.html",
-    "static/js/2.581d8629.chunk.js.LICENSE.txt": "/Rey/static/js/2.581d8629.chunk.js.LICENSE.txt"
+    "main.js": "http://localhost:3000/static/js/main.d9bc61a9.chunk.js",
+    "main.js.map": "http://localhost:3000/static/js/main.d9bc61a9.chunk.js.map",
+    "runtime-main.js": "http://localhost:3000/static/js/runtime-main.53c2b600.js",
+    "runtime-main.js.map": "http://localhost:3000/static/js/runtime-main.53c2b600.js.map",
+    "static/js/2.d639f625.chunk.js": "http://localhost:3000/static/js/2.d639f625.chunk.js",
+    "static/js/2.d639f625.chunk.js.map": "http://localhost:3000/static/js/2.d639f625.chunk.js.map",
+    "index.html": "http://localhost:3000/index.html",
+    "static/js/2.d639f625.chunk.js.LICENSE.txt": "http://localhost:3000/static/js/2.d639f625.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d1868e56.js",
-    "static/js/2.581d8629.chunk.js",
-    "static/js/main.9d8b4787.chunk.js"
+    "static/js/runtime-main.53c2b600.js",
+    "static/js/2.d639f625.chunk.js",
+    "static/js/main.d9bc61a9.chunk.js"
   ]
 }
